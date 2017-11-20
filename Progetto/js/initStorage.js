@@ -3,11 +3,11 @@ Questa funzione deve essere eseguita onload della pagina index.html (pagina home
 
 STRUTTURA ATTUALE DEL LOCAL STORAGE: (sarà aggiornata con il tempo)
 	-localStorage.pages:array di Object, tali Object sono formati da un id (stringa rappresentante il titolo dell'articolo), un campo text (stringa rappresentante il testo dell'articolo) e un campo likedBy
-    contenente un array con gli id univoci degli utenti che hanno messo like a tale articolo
+    contenente un array con gli username univoci degli utenti che hanno messo like a tale articolo
     
 VERSIONE 2.0: (ricordarsi sempre di eseguire tale js on load della prima pagina)
     è stato aggiunto un nuovo indirizzo a localStorage chiamato localStorage.users contenente un array di Object.
-    Tali object sono formati da username, email e password (hashata univocamente in initUser.js). 
+    Tali object sono formati da username univoco, email univoca e password (hashata univocamente in initUser.js). 
     Questi dati devono essere richiesti al momento della registrazione. 
     Il login verrà eseguito tramite du campi: primo campo username/email e secondo campo password    
     
