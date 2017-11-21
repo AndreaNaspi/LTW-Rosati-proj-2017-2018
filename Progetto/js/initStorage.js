@@ -1,5 +1,5 @@
 /**
-Questa funzione deve essere eseguita onload della pagina index.html (pagina home/iniziale). Si occupa semplicemente di inizializzare l'array di object "pages" in localStorage con le pagine di esempio.
+Questa funzione deve essere eseguita onload della pagina index.html (pagina index/iniziale). Si occupa semplicemente di inizializzare l'array di object "pages" in localStorage con le pagine di esempio.
 
 STRUTTURA ATTUALE DEL LOCAL STORAGE: (sarà aggiornata con il tempo)
 	-localStorage.pages:array di Object, tali Object sono formati da un id (stringa rappresentante il titolo dell'articolo), un campo text (stringa rappresentante il testo dell'articolo) e un campo likedBy

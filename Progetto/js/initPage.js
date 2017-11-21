@@ -1,7 +1,7 @@
 /**
 Questa pagina contiene i due script per gestire la generazione dinamica della pagina riguardante l'articolo. Infatti dovranno essere eseguiti onload della pagina riguardante l'articolo.
 Attualmente la funzione initPage riguarda solo il setting dinamico del text (campo presente nel local storage), facilmente estendibile ad immagine rappresentativa dell'articolo e altro (sarà aggiornata in seguito).
-Scrivere ad andreanaspi@porcodio.com per capire come si usano gli external js
+
 
 PER IL GIUSTO FUNZIONAMENTO DEI DUE METODI è NECESSARIO RISPETTARE, OLTRE A QUELLO SPECIFICATO NEI DUE JAVADOC, LA STRUTTURA DEL LOCAL STORAGE SPECIFICATA IN INITSTORAGE.JS (che sarà aggiornata con il tempo insieme a questi metodi)
 **/
@@ -24,7 +24,7 @@ Una volta analizzata la query string e trovati l'id corrispondente in local stor
                 if (typeof(localStorage.pages) == "undefined" || localStorage.pages.length == 0) 
                 {
                     alert("Il sito è in manutenzione! Verrai riportato alla home.");
-                    window.open("home.html","_self");
+                    window.open("../html/index.html","_self");
                     return;
                 }
 
@@ -33,7 +33,7 @@ Una volta analizzata la query string e trovati l'id corrispondente in local stor
                 if(queryString.indexOf("?") == -1)
                 {
                     alert("URL non valido. Verrai riportato alla home.");
-                    window.open("home.html","_self");
+                    window.open("../html/index.html","_self");                    
                     return;
                 }
                 queryString.replace(new RegExp("[\"\'?]","g"),"").split("&").forEach(
@@ -43,7 +43,7 @@ Una volta analizzata la query string e trovati l'id corrispondente in local stor
                     if(actualValue.length > 2)
                     {
                         alert("Url non valido. Verrai riportato alla home.");
-                        window.open("home.html","_self");
+                        window.open("../html/index.html","_self");                        
                         return;
                     }
                     if(actualValue[0] == "id") 
@@ -56,7 +56,7 @@ Una volta analizzata la query string e trovati l'id corrispondente in local stor
                 if(id=="")                
                 {
                     alert("Pagina non presente sul sito. Verrai riportato alla home.");
-                    window.open("home.html","_self");
+                    window.open("../html/index.html","_self");                    
                     return;
                 }
 
@@ -75,7 +75,7 @@ Una volta analizzata la query string e trovati l'id corrispondente in local stor
                 if(text == "")
                 {
                     alert("Pagina non disponibile al momento. Verrai riportato alla home.");
-                    window.open("home.html","_self");
+                    window.open("../html/index.html","_self");                    
                     return;
                 }
 
