@@ -1,5 +1,6 @@
 *{
 	box-sizing: border-box;
+	font-family: MyFont;
 	}
 html,body{
 	padding:0;
@@ -7,23 +8,31 @@ html,body{
 	width: 100%;
 	height: 100%;
 	background: -moz-linear-gradient(#3f0000 , #000000) fixed;
+	background: linear-gradient(#3f0000 , #000000) fixed;
 }
 
 @font-face{
 	font-family: Myfont;
 	src: url(../html/msbolditalic.woff);
 }
-.header #techwiki{ color: #e2e2e2; font-size: 105px; font-style: italic; font-family: Myfont; margin:-5px 0px 0px 4cm;}
+.header #techwiki{ color: #e2e2e2; font-size: 105px; font-style: italic; font-family: Myfont; margin-top:-6px; padding-left: 210px;}
+
 .header a
 {
 	font-size: 20px;
-	font-family: Myfont;
-	
-}
-.testo{
-	color: #e2e2e2;  font-family: Myfont; margin-left: 6cm ; font-size: 20px
+	text-decoration: none;
 }
 
+.header #register
+{
+	float:right;
+	color: #e2e2e2;
+	position: absolute;
+    top: 0px;
+    right: 5px;
+	font-size: 20px;
+
+}
 .header
 {
 	overflow: hidden;
@@ -56,7 +65,6 @@ html,body{
 	height: 100%;
 	width: 76%;
 	color: #e2e2e2;  
-	font-family: Myfont; 
 	font-size: 20px;
     word-break: break-word;
 	display:table-column;
@@ -71,7 +79,6 @@ html,body{
 	display: block;
 	text-decoration: none;
 	padding: 7px 9px;
-	font-family: Myfont;
 	font-size: 20px;
 }
 .vertical-menu a:hover
@@ -91,7 +98,6 @@ html,body{
 }
 #darkRight.pageColumn
 {
-	z-index: 10;
 	background-color:black;
 	width:12%;
 	border-left:4px solid #e2e2e2;
