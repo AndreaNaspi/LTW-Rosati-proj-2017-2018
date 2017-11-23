@@ -1,0 +1,70 @@
+*{
+	box-sizing: border-box;
+	}
+html,body{
+	padding:0;
+	margin:0;
+	width: 100%;
+	height: 100%;
+	background: -moz-linear-gradient(#3f0000 , #000000) fixed;
+}
+
+@font-face{
+	font-family: Myfont;
+	src: url(msbolditalic.woff);
+}
+.header #techwiki{ color: #e2e2e2; font-size: 105px; font-style: italic; font-family: Myfont; margin:-5px 0px 0px 4cm;}
+.testo{
+	color: #e2e2e2;  font-family: Myfont; margin-left: 6cm ; font-size: 20px
+}
+
+.header
+{
+	overflow: hidden;
+	width:100%;
+	height: 110px;
+}
+
+.header img 
+{
+	float:left;
+	width:110px;
+	height: 110px;	
+ 
+}
+.page
+{
+	width: 100%;
+	height: calc(100% - 110px);
+	border-top: 4px solid #e2e2e2;
+	overflow:auto;
+	display:table;
+}
+.pageRow
+{
+	display:table-row;
+}
+.pageColumn
+{
+	float:left;
+	height: 100%;
+	width: 76%;
+	padding: 7px 9px;
+	color: #e2e2e2;  
+	font-family: Myfont; 
+	font-size: 20px;
+    word-break: break-word;
+	display:table-column;
+}
+#darkLeft.pageColumn
+{
+	background-color:black;
+	width:12%;
+	border-right:4px solid #e2e2e2;
+}
+#darkRight.pageColumn
+{
+	background-color:black;
+	width:12%;
+	border-left:4px solid #e2e2e2;
+}
