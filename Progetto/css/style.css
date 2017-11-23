@@ -11,7 +11,7 @@ html,body{
 
 @font-face{
 	font-family: Myfont;
-	src: url(msbolditalic.woff);
+	src: url(../assets/msbolditalic.woff);
 }
 .header #techwiki{ color: #e2e2e2; font-size: 105px; font-style: italic; font-family: Myfont; margin:-5px 0px 0px 4cm;}
 .testo{
