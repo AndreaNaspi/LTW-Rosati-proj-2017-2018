@@ -9,8 +9,7 @@ VERSIONE 2.0: (ricordarsi sempre di eseguire tale js on load della prima pagina)
     è stato aggiunto un nuovo indirizzo a localStorage chiamato localStorage.users contenente un array di Object.
     Tali object sono formati da username univoco, email univoca e password (hashata univocamente in initUser.js). 
     Questi dati devono essere richiesti al momento della registrazione. 
-    Il login verrà eseguito tramite du campi: primo campo username/email e secondo campo password    
-    
+    Il login verrà eseguito tramite du campi: primo campo username/email e secondo campo password   
 **/
 function init()
 {
