@@ -14,7 +14,11 @@ html,body{
 	background: linear-gradient(#3f0000 , #000000) fixed;
 }
 
-.link
+a > *
+{
+	color: #788CFF;
+}
+a
 {
 	color: #788CFF;
 }
@@ -52,7 +56,7 @@ html,body{
 	list-style-image: none;
   	position: absolute;
   	text-align: center;
-  	top: 24px;
+  	top: 23px;
   	padding: 0px;
   	width: 100%;
   	text-align: center;
