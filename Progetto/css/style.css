@@ -29,7 +29,7 @@ a > *
 	display:block;
 	font-size: 105px; 
 	margin-top:-6px; 
-	padding-left: 210px;
+	padding-left: 12%;
 }
 .header ul {
 	list-style: none;
@@ -45,7 +45,6 @@ a > *
 .header ul li:hover
 {
 	background-color: #3f0000;
-	transition: 0.5s;
 }
 .header ul ul
 {
