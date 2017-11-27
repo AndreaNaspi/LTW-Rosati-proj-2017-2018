@@ -70,7 +70,6 @@ a
 .header ul li:hover > ul
 {
 	display: block;
-	padding-right: 25px;
 }
 .header a
 {
@@ -146,19 +145,3 @@ a
 	border-right:4px solid #e2e2e2;
 	padding: 7px 9px;
 }
-
-
-/*.header ul
-{
-	list-style: none;
-	float:right;
-	position: absolute;
-    top: 55px;
-    right: 0px;
-	font-size: 20px;
-	display: block;
-}
-.header ul li:hover
-{
-	background-color: #3f0000;
-}*/
