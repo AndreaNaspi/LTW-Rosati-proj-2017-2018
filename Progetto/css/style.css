@@ -115,6 +115,7 @@ a > *
 	text-decoration: none;
 	padding: 7px 9px;
 	font-size: 20px;
+	border-bottom: 4px solid #e2e2e2;
 }
 .vertical-menu a:hover
 {
