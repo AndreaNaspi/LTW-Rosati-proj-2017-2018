@@ -70,6 +70,7 @@ a
 .header ul li:hover > ul
 {
 	display: block;
+	padding-right: 25px;
 }
 .header a
 {
@@ -133,17 +134,16 @@ a
 {
 	background-color:black;
 	width:12%;
-	border-right:4px solid #e2e2e2;
 }
 #darkRight.pageColumn
 {
 	background-color:black;
 	width:12%;
-	border-left:4px solid #e2e2e2;
 }
 #text.pageColumn
 {
-
+	border-left:4px solid #e2e2e2;
+	border-right:4px solid #e2e2e2;
 	padding: 7px 9px;
 }
 
