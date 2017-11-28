@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
 	<META charset="UTF-8" name="register">
@@ -12,28 +12,44 @@
 	<ul>
 			<li>Account
 				<ul>
-				<a href="login.html" value="Effettura il login"><li>Login</li></a>
+				<a href="login.html" value="Effettua il login"><li>Login</li></a>
 				<a href="register.html" value="Registrati"><li>Registrati</li></a>
 				</ul>
 			</li>
 		</ul>
 	</div>
-	<form>
-		<table align="center" width="33%">
-			<caption><h1 align="center">Login</h1></caption>
-			<tr>
-				<td>Username: </td>
-				<td><input id="nick" type="text" name="username" placeholder="Il tuo username" size="50%" required></td>
-			</tr>
-			<tr>
-				<td>Password: </td>
-				<td><input id="pass" type="password" name="pawword" placeholder="password" minlength="8" size="50%" required></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><input type="submit" name="submit" value="Login" style="color: black"></td>
-			</tr>
-		</table>
-	</form>
-	<p align="center">Non hai un account? <a href="register.html" title="Registrazione" style="text-decoration: none;">Registrati</a>, è gratis!</p>
+	<div class="page">
+		<div class="pageRow">
+			<div class="pageColumn" id="darkLeft">
+				<div class="vertical-menu">
+					<a href="index.html" class="active">Home</a>
+					<a href="#">Profilo</a>
+					<a href="#">Pagina random</a>
+					<a href="#">Impostazioni</a>
+					<!--<a href="#">Link 4</a>-->
+				</div>
+			</div>
+			<div class="pageColumn" id="text">
+			<form>
+				<table align="center" width="33%">
+					<caption><h1 align="center">Login</h1></caption>
+					<tr>
+						<td>Username: </td>
+						<td><input id="nick" type="text" name="username" placeholder="Il tuo username" size="50%" required></td>
+					</tr>
+					<tr>
+						<td>Password: </td>
+						<td><input id="pass" type="password" name="pawword" placeholder="password" minlength="8" size="50%" required></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><input type="submit" name="submit" value="Login" style="color: black"></td>
+					</tr>
+				</table>
+			</form>
+
+			<p align="center">Non hai un account? <a href="register.html" title="Registrazione" style="text-decoration: none;">Registrati</a>, è gratis!</p>
+			</div>
+		<div class="pageColumn" id="darkRight"></div>
+		</div>
 </body>
 </html>
