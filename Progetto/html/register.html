@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<META charset="UTF-8" name="register">
@@ -18,26 +17,42 @@
 			</li>
 		</ul>
 	</div>
-	<form>
-		<table align="center" width="33%">
-		<caption><h1 align="center">Register</h1></caption>
-			<tr>
-				<td>Username: </td>
-				<td><input id="username" type="text" name="username" placeholder="l'username voluto" size="50%" required></td>
-			</tr>
-			<tr>
-				<td>Password: </td>
-				<td><input id="password" type="password" name="pawword" placeholder="password (min 8 caratteri)" minlength="8" size="50%" required></td>
-			</tr>
-			<tr>
-				<td>Email: </td>
-				<td><input id="email" type="email" name="email" placeholder="la tua mail" size="50%" required></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><input type="submit" name="submit" value="Registrati" style="color: black";></td>
-			</tr>
-		</table>
-	</form>
-	<p align="center">Hai già un account? Fai il <a href="login.html" title="Login" style="text-decoration: none;">Login</a>!</p>
+	<div class="page">
+		<div class="pageRow">
+			<div class="pageColumn" id="darkLeft">
+				<div class="vertical-menu">
+  					<a href="index.html" class="active">Home</a>
+  					<a href="#">Profilo</a>
+  					<a href="#">Pagina random</a>
+  					<a href="#">Impostazioni</a>
+  					<!--<a href="#">Link 4</a>-->
+  				</div>
+  			</div>
+  			<div class="pageColumn" id="text">
+				<form>
+					<table align="center" width="33%">
+					<caption><h1 align="center">Register</h1></caption>
+						<tr>
+							<td>Username: </td>
+							<td><input id="username" type="text" name="username" placeholder="l'username voluto" size="50%" required></td>
+						</tr>
+						<tr>
+							<td>Password: </td>
+							<td><input id="password" type="password" name="pawword" placeholder="password (min 8 caratteri)" minlength="8" size="50%" required></td>
+						</tr>
+						<tr>
+							<td>Email: </td>
+							<td><input id="email" type="email" name="email" placeholder="la tua mail" size="50%" required></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center"><input type="submit" name="submit" value="Registrati" style="color: black";></td>
+						</tr>
+					</table>
+				</form>
+				<p align="center">Hai già un account? Fai il <a href="login.html" title="Login" style="text-decoration: none;">Login</a>!</p>
+			</div>
+			<div class="pageColumn" id="darkRight"></div>
+		</div>
+	</div>
 </body>
 </html>
