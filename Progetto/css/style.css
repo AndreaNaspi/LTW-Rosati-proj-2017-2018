@@ -18,10 +18,6 @@ a > *
 {
 	color: #788CFF;
 }
-a
-{
-	color: #788CFF;
-}
 
 @font-face{
 	font-family: Myfont;
@@ -33,7 +29,7 @@ a
 	display:block;
 	font-size: 105px; 
 	margin-top:-6px; 
-	padding-left: 210px;
+	padding-left: 12%;
 }
 .header ul {
 	list-style: none;
@@ -82,15 +78,15 @@ a
 {
 	height: auto;
 }
-.header ul li:hover ul
+.header ul li:hover > ul
 {
 	display: block;
 }
+
 .header a
 {
 	text-decoration: none;
 }
-
 .header
 {
 	overflow: hidden;
@@ -136,7 +132,6 @@ a
 	padding: 7px 9px;
 	font-size: 20px;
 	transition: all 0.6s;
-
 }
 .vertical-menu a:hover
 {
@@ -154,20 +149,15 @@ a
 {
 	background-color:black;
 	width:12%;
-	
 }
 #darkRight.pageColumn
 {
 	background-color:black;
 	width:12%;
-	
 }
 #text.pageColumn
 {
-
-	padding: 7px 9px;
 	border-left:4px solid #e2e2e2;
 	border-right:4px solid #e2e2e2;
-}
-
+	padding: 7px 9px;
 }
