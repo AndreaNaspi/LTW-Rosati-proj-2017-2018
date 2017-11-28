@@ -51,7 +51,7 @@ a > *
 	transition: all 0.6s;
 
 }
-.header ul li :hover :after
+.header ul ul li:hover:after
 {
 
 	content: "\00bb";
