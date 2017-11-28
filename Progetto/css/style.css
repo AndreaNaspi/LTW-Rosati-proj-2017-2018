@@ -39,23 +39,38 @@ a
 	list-style: none;
   	list-style-image: none;
   	position: absolute;
+  	border-bottom: 4px solid #e2e2e2;
+  	
   	padding: 0px;
   	right: 0px;
-  	top: 60px;
+  	top: 90px;
   	width: 12%;
   	text-align: center;
   	font-size: 20px;
+
 }
 .header ul li:hover
 {
 	background-color: #3f0000;
+	transition: all 0.6s;
+
+}
+.header ul li :hover :after
+{
+
+	content: "\00bb";
+	transition: all 0.6s;
+
+
 }
 .header ul ul
 {
 	display: none;
 	list-style-image: none;
   	position: absolute;
+
   	text-align: center;
+  	border-bottom: 4px solid #e2e2e2;
   	top: 23px;
   	padding: 0px;
   	width: 100%;
@@ -67,7 +82,7 @@ a
 {
 	height: auto;
 }
-.header ul li:hover > ul
+.header ul li:hover ul
 {
 	display: block;
 }
@@ -116,14 +131,20 @@ a
 {
 	color: #e2e2e2;
 	display: block;
+	border-bottom: 4px solid #e2e2e2;
 	text-decoration: none;
 	padding: 7px 9px;
 	font-size: 20px;
+	transition: all 0.6s;
+
 }
 .vertical-menu a:hover
 {
 	background-color: #3f0000;
+	transition: all 0.6s;
+	cursor: pointer;
 }
+
 .vertical-menu a.active
 {
 	background-color: #e2e2e2;
@@ -133,32 +154,20 @@ a
 {
 	background-color:black;
 	width:12%;
-	border-right:4px solid #e2e2e2;
+	
 }
 #darkRight.pageColumn
 {
 	background-color:black;
 	width:12%;
-	border-left:4px solid #e2e2e2;
+	
 }
 #text.pageColumn
 {
 
 	padding: 7px 9px;
+	border-left:4px solid #e2e2e2;
+	border-right:4px solid #e2e2e2;
 }
 
-
-/*.header ul
-{
-	list-style: none;
-	float:right;
-	position: absolute;
-    top: 55px;
-    right: 0px;
-	font-size: 20px;
-	display: block;
 }
-.header ul li:hover
-{
-	background-color: #3f0000;
-}*/
