@@ -13,10 +13,17 @@ html,body{
 	background: -moz-linear-gradient(#3f0000 , #000000) fixed;
 	background: linear-gradient(#3f0000 , #000000) fixed;
 }
-
+a
+{
+	color: #788CFF;
+}
 a > *
 {
 	color: #788CFF;
+}
+table
+{
+	word-break: normal;
 }
 
 @font-face{
@@ -119,7 +126,7 @@ a > *
 	width: 76%;
 	color: #e2e2e2;  
 	font-size: 20px;
-    word-break: break-word;
+    word-break: break-all;
 	display:table-column;
 	overflow: hidden;
 }
