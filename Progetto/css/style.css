@@ -34,7 +34,10 @@ img
 {
 	image-orientation: from-image;
 }
-
+input
+{
+	background-color: transparent;
+}
 @font-face{
 	font-family: Myfont;
 	src: url(../html/msbolditalic.woff) format('woff');
