@@ -190,6 +190,9 @@ input
 #text.pageColumn h2
 {
 	font-size: 23px;
+
+	box-shadow: 0px 2px 1px #e2e2e2;
+
 }
 #text.pagecolumn img
 {
