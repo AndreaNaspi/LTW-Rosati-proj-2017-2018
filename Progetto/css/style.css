@@ -13,14 +13,17 @@ html,body{
 	background: -moz-linear-gradient(#3f0000 , #000000) fixed;
 	background: linear-gradient(#3f0000 , #000000) fixed;
 }
-
+a
+{
+	color: #788CFF;
+}
 a > *
 {
 	color: #788CFF;
 }
-a 
+table
 {
-	color: #788CFF;
+	word-break: normal;
 }
 table
 {
@@ -31,7 +34,10 @@ img
 {
 	image-orientation: from-image;
 }
-
+input
+{
+	background-color: transparent;
+}
 @font-face{
 	font-family: Myfont;
 	src: url(../html/msbolditalic.woff) format('woff');
