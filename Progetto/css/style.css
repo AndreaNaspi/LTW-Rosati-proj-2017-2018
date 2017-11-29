@@ -18,6 +18,19 @@ a > *
 {
 	color: #788CFF;
 }
+a 
+{
+	color: #788CFF;
+}
+table
+{
+	word-break: normal;
+
+}
+img
+{
+	image-orientation: from-image;
+}
 
 @font-face{
 	font-family: Myfont;
@@ -119,7 +132,7 @@ a > *
 	width: 76%;
 	color: #e2e2e2;  
 	font-size: 20px;
-    word-break: break-word;
+    word-break: break-all;
 	display:table-column;
 	overflow: hidden;
 }
@@ -161,3 +174,20 @@ a > *
 	border-right:4px solid #e2e2e2;
 	padding: 7px 9px;
 }
+#text.pageColumn h1
+{
+	text-shadow: 5px 5px 5px 5px #e2e2e2;
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+#text.pageColumn h2
+{
+	font-size: 23px;
+}
+#text.pagecolumn img
+{
+	max-width: 70%;
+	max-height: 480px;
+	box-shadow:3px 3px 7px 3px #e2e2e2;
+}
+

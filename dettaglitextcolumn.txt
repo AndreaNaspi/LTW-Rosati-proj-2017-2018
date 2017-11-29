@@ -1,0 +1,10 @@
+PARTICOLARI #TEXT.PAGECOLUMN
+
+-h1(titolo dell'articolo)
+-h2 (sottotitoli)
+-h3(link dell'artciolo)
+-img (sopra l'articolo)
+-font normale per la didascalia
+-divisione della pagina per gli articoli ( 2 articoli per riga )
+-colore diverso per quando si passa sopra un link e una volta cliccato
+-prima del login non ci deve essere profilo nella vertical menu(credo con uno script)
