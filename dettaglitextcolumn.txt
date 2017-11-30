@@ -8,3 +8,6 @@ PARTICOLARI #TEXT.PAGECOLUMN
 -divisione della pagina per gli articoli ( 2 articoli per riga )
 -colore diverso per quando si passa sopra un link e una volta cliccato FATTO
 -prima del login non ci deve essere profilo nella vertical menu(credo con uno script)FATTO
+-aggiungere lo spazio di ricerca
+-spostare account e tutto quello che c'è sotto dentro la dark column
+
