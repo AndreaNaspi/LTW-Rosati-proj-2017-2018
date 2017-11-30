@@ -23,10 +23,12 @@ function init()
     }
     if (typeof(localStorage.users) == "undefined") 
     {
-        localStorage.users=JSON.stringify([{username:"admin",email:"andreanaspi@gmail.com",password:"1303378837"}]);
+        localStorage.users=JSON.stringify([{username:"admin",email:"admintechwiki@gmail.com",password:"1303378837"}]);
     }
-
-    localStorage.logged=JSON.stringify({logged:false, username:""});
+    if((typeof(localStorage.users) == "undefined"))
+    {
+        localStorage.logged=JSON.stringify({logged:false, username:""});
+    }
 
     var newPages = [{id:"HTML", src:"", likedBy:[], text:"This is the html page, in the body tag you can use javascript or jquery to do some scripts. Javascript is beatiful."},
                     {id:"JavaScript", src:"", likedBy:[], text:"This is the javascript page, this code is write inside the html tag style. Jquery is an extension of javascript"},

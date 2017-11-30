@@ -5,8 +5,9 @@
 	 <title>Pagina articolo</title>
 	 <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
 	 <meta charset="utf-8">
+	 <script src="../js/checkLogin.js" type="text/javascript" async></script>
 </head>
-<body>
+<body onload="updateLogin();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -16,7 +17,7 @@
 				<div class="pageColumn" id="darkLeft">
 					<div class="vertical-menu">
   					<a href="index.html">Home</a>
-  					<a href="#" style="display: none">Profilo</a>
+  					<a href="#" id="profile" style="display: none">Profilo</a>
   					<a href="#">Pagina random</a>
   					<a href="#">About</a>
 					</div>
@@ -31,10 +32,10 @@
 			</div>
 			<div class="pageColumn" id="darkRight">
 				<ul>
-					<li>Account
-						<ul>
-							<a href="login.html" id="login" value="Effettua il login" style="text-decoration: none;"><li>Login</li></a>
-							<a href="register.html" id="register" value="Registrati" style="text-decoration: none;""><li>Registrati</li></a>
+					<li><div id="accountName">Account</div>
+						<ul id="listAccount">
+							<a href="login.html" id="login" class="button" value="Effettua il login" style="text-decoration: none;"><li>Login</li></a>
+							<a href="register.html" id="register" class="button" value="Registrati" style="text-decoration: none;"><li>Registrati</li></a>
 						</ul>
 					</li>
 				</ul>

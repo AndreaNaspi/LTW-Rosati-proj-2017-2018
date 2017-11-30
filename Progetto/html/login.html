@@ -2,9 +2,11 @@
 <head>
 	<META charset="UTF-8" name="register">
 	<link rel="stylesheet" href="../css/style.css">
+	<script type="text/javascript" src="../js/initUser.js" async></script>
+	<script src="../js/checkLogin.js" type="text/javascript" async></script>
 	<title>Login a TecHWiki</title>
 </head>
-<body>
+<body onload="updateLogin();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -14,23 +16,23 @@
 			<div class="pageColumn" id="darkLeft">
 				<div class="vertical-menu">
 					<a href="index.html">Home</a>
-					<a href="#" style="display: none">Profilo</a>
+					<a href="#" id="profile" style="display: none">Profilo</a>
 					<a href="#">Pagina random</a>
-					<a href="#">Impostazioni</a>
+					<a href="#">About</a>
 					<!--<a href="#">Link 4</a>-->
 				</div>
 			</div>
 			<div class="pageColumn" id="text">
-			<form>
+			<form onsubmit="return login();">
 				<table align="center" width="33%">
 					<caption><h1 align="center">Login</h1></caption>
 					<tr>
 						<td>Username: </td>
-						<td><input id="nick" type="text" name="username" placeholder="Il tuo username" size="50%" required></td>
+						<td><input id="nick" type="text" name="username" autocomplete="off" placeholder="Il tuo username" size="50%" required></td>
 					</tr>
 					<tr>
 						<td>Password: </td>
-						<td><input id="pass" type="password" name="pawword" placeholder="password" minlength="8" size="50%" required></td>
+						<td><input id="pass" type="password" name="pawword" autocomplete="off" placeholder="password" minlength="8" size="50%" required></td>
 					</tr>
 					<tr>
 						<td colspan="2" align="center"><input type="submit" name="submit" value="Login"></td>
@@ -42,10 +44,10 @@
 			</div>
 		<div class="pageColumn" id="darkRight">
 			<ul>
-				<li>Account
-					<ul>
-						<a href="login.html" id="login" value="Effettua il login" style="text-decoration: none;"><li>Login</li></a>
-						<a href="register.html" id="register" value="Registrati" style="text-decoration: none;"><li>Registrati</li></a>
+				<li><div id="accountName">Account</div>
+					<ul id="listAccount">
+						<a href="login.html" class="button" id="login" value="Effettua il login" style="text-decoration: none;"><li>Login</li></a>
+						<a href="register.html" class="button" id="register" value="Registrati" style="text-decoration: none;"><li>Registrati</li></a>
 					</ul>
 				</li>
 			</ul>

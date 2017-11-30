@@ -5,8 +5,9 @@
 	 <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
 	 <meta charset="utf-8">
 	 <script src="../js/initStorage.js" type="text/javascript" charset="utf-8" async></script>
+	 <script src="../js/checkLogin.js" type="text/javascript" async></script>
 </head>
-<body onload="init();">
+<body onload="init(); updateLogin();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -16,7 +17,7 @@
 			<div class="pageColumn" id="darkLeft">
 				<div class="vertical-menu">
 					<a href="index.html" class="active">Home</a>
-					<a href="#" style="display: none">Profilo</a>
+					<a href="#" id="profile" style="display: none">Profilo</a>
 					<a href="#">Pagina random</a>
 					<a href="#">About</a>
 				</div>
@@ -24,10 +25,10 @@
 			<div class="pageColumn" id="text"></div>
 			<div class="pageColumn" id="darkRight">
 				<ul>
-					<li>Account
-						<ul>
-							<a href="login.html" id="login" value="Effettua il login" style="text-decoration: none;"><li>Login</li></a>
-							<a href="register.html" id="register" value="Registrati" style="text-decoration: none;""><li>Registrati</li></a>
+					<li><div id="accountName">Account</div>
+						<ul id="listAccount">
+							<a href="login.html" class="button" id="login" value="Effettua il login" style="text-decoration: none;"><li>Login</li></a>
+							<a href="register.html" class="button" id="register" value="Registrati" style="text-decoration: none;"><li>Registrati</li></a>
 						</ul>
 					</li>
 				</ul>
