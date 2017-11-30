@@ -6,5 +6,5 @@ PARTICOLARI #TEXT.PAGECOLUMN
 -img (sopra l'articolo) FATTO
 -font normale per la didascalia FATTO
 -divisione della pagina per gli articoli ( 2 articoli per riga )
--colore diverso per quando si passa sopra un link e una volta cliccato
--prima del login non ci deve essere profilo nella vertical menu(credo con uno script)
+-colore diverso per quando si passa sopra un link e una volta cliccato FATTO
+-prima del login non ci deve essere profilo nella vertical menu(credo con uno script)FATTO
