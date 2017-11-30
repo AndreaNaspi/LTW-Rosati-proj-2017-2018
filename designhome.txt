@@ -1,0 +1,6 @@
+DESIGN HOME
+-la prima sezione è formata dalla top 15 e la pagina sarà divisa in due ...
+quindi due articoli per riga
+-articolo del giorno : ogni 24 ore si prende random dal sito un articolo
+(in dubbio per la fattibilità)su una riga
+-ultime uscite: gli ultimi  n articoli caricati in ordine cronologico , su una riga.
