@@ -7,8 +7,6 @@ function updateLogin()
         document.getElementById("accountName").innerHTML=logged;
         document.querySelectorAll(".button").forEach(function(value){value.style.display="none";});
         var logout = document.createElement("a");
-        logout.class ="button";
-        logout.id="logout";
         logout.href="";
         logout.innerHTML="<li>Logout</li>";
         logout.style="text-decoration: none;"
