@@ -1,3 +1,4 @@
 MS Office Symbol Bold 72px
 E2E2E2 detail color/text color
 788CFF text link color
+FF7F00 visited link color
