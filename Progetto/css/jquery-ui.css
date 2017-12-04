@@ -5,10 +5,14 @@
 
 .ui-helper-hidden-accessible { display:none; }
 
+*
+{
+	box-sizing: border-box;
+}
 @font-face
 {
 	font-family: Myfont;
-	src: url(../html/msbolditalic.woff) format('woff');
+	src: url(LTW-Rosati-proj-2017-2018/Progetto/html/msbolditalic.woff) format('woff');
 }
 
 /* Misc visuals
@@ -22,24 +26,15 @@
 	width: 100%;
 	height: 100%;
 }
-.ui-accordion .ui-accordion-header {
-	display: block;
-	cursor: pointer;
-	position: relative;
-	margin: 2px 0 0 0;
-	padding: .5em .5em .5em .7em;
-	font-size: 100%;
-}
-.ui-accordion .ui-accordion-content {
-	padding: 1em 2.2em;
-	border-top: 0;
-	overflow: auto;
-}
+
 .ui-autocomplete {
 	position: absolute;
 	top: 0;
 	left: 0;
 	cursor: default;
+	max-height: 250px;
+	overflow-y: auto; 
+	overflow-x: hidden;
 }
 .ui-menu {
 	list-style: none;
@@ -66,11 +61,6 @@
 	line-height: 0;
 	border-width: 1px 0 0 0;
 }
-.ui-menu .ui-state-focus,
-.ui-menu .ui-state-active {
-	margin: -1px;
-}
-
 
 .ui-menu-item-wrapper {
 	padding-left: 2em;
@@ -135,6 +125,7 @@
 	color: #454545;
 	text-decoration: none;
 }
+
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
 .ui-widget-header .ui-state-hover,
@@ -169,7 +160,7 @@
 .ui-widget-header .ui-state-active,
 .ui-state-active:hover 
 {
-	border: 1px solid #e2e2e2;
+	border:1px solid #e2e2e2; /*this border cause padding down */
 	background: #e2e2e2;
 	font-weight: normal;
 	color: #ffffff;
