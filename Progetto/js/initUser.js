@@ -37,7 +37,8 @@ function register()
     users.push({username:username, email:email, password:hash});
     localStorage.users = JSON.stringify(users);
     alert("Registrazione effettuata con successo!");
-    return true;
+    window.open("../html/login.html","_self");
+    return false;
 }
 
 function checkUniqueUsername(value, users)
@@ -84,5 +85,6 @@ function login()
     {
         alert("Errore inaspettato. Verrai reindirizzato alla pagina iniziale.");
         window.open("../html/index.html","_self");
+        return false;
     }
 }
