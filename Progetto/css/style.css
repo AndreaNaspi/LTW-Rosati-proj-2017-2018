@@ -1,3 +1,7 @@
+@font-face{
+	font-family: Myfont;
+	src: url(../html/msbolditalic.woff) format('woff');
+}
 *{
 	box-sizing: border-box;
 	font-family: Myfont;
@@ -44,10 +48,7 @@ input
 	border: 3px solid #e2e2e2 ;
 	box-shadow: 1px 0px 1.8px #e2e2e2;
 }
-@font-face{
-	font-family: Myfont;
-	src: url(../html/msbolditalic.woff) format('woff');
-}
+
 .header #techwiki
 {
 	font-style: italic;
