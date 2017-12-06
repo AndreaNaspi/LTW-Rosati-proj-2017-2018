@@ -52,7 +52,12 @@ input
 	border: 3px solid #e2e2e2 ;
 	box-shadow: 1px 0px 1.8px #e2e2e2;
 }
-
+figure
+{
+	display:inline-block;
+	text-align: left;
+	
+}
 .header #techwiki
 {
 	font-style: italic;
@@ -93,32 +98,33 @@ input
 	height: 300px;
 
 }
-#sezione1.pageColumn figure img
+#sezione1.pageColumn
+{
+	height: auto;
+	width: 100%;
+}
+#sezione1L.pageColumn
+{
+	width: 50%;
+	height: auto;
+}
+#sezione1R.pageColumn
+{
+	height: auto;
+	width: 50%;
+}
+#sezione2.pageColumn
+{
+	height: auto;
+	width: 100%;	
+}	
+#sezione2.pageColumn > * img
 {
 	display: block;
 	margin: auto;
 	width: 400px;
 	height: 300px;
 }
-#sezione1.pageColumn
-{
-	height: auto;
-	
-	width: 100%;
-	border: 4px solid red;
-}
-#sezione1L.pageColumn
-{
-	width: 50%;
-	height: auto;
-	border: 4px solid yellow;
-}
-#sezione1R.pageColumn
-{
-	border:4px solid orange;
-	height: auto;
-	width: 50%;
-}		
 .pageColumn
 {
 	float:left;
@@ -196,7 +202,6 @@ input
   	list-style-image: none;
   	position: absolute;
   	border-bottom: 4px solid #e2e2e2;
-  	
   	padding: 0px;
   	right: 0px;
   	top: 90px;
