@@ -196,51 +196,48 @@ figure
 {
 	background-color:black;
 	width:12%;
+	word-break: normal;
 }
-#darkright.pageColumn ul {
-	list-style: none;
-  	list-style-image: none;
-  	position: absolute;
-  	border-bottom: 4px solid #e2e2e2;
-  	padding: 0px;
-  	right: 0px;
-  	top: 90px;
-  	width: 12%;
-  	text-align: center;
-  	font-size: 20px;
-}
-#darkright.pageColumn ul li:hover
+.dropbtn
 {
-	background-color: #3f0000;
-	transition: all 0.6s;
-
+	background-color: #000000;
+	font-size: 20px;
+	border-bottom: 4px solid #e2e2e2;
 }
-#darkright.pageColumn ul ul li:hover:after
+.dropdown
 {
-
-	content: "\00bb";
-	transition: all 0.6s;
+	text-align: center;
 }
-#darkright.pageColumn ul ul
+.dropdown-content
 {
-	display: none;
-	list-style-image: none;
-  	position: absolute;
-
-  	text-align: center;
-  	border-bottom: 4px solid #e2e2e2;
-  	top: 23px;
-  	padding: 0px;
-  	width: 100%;
-  	text-align: center;
-  	font-size: 20px;
-  	background-color: #000000;
+	position: absolute;
+	opacity: 0;
+	border-bottom: 4px solid #e2e2e2;
+	width: 12%;
 }
-#darkright.pageColumn ul li ul li
-{
-	height: auto;
-}
-#darkright.pageColumn ul li:hover > ul
+.dropdown-content a
 {
 	display: block;
+}
+.dropdown-content a:hover
+{
+	display: block;
+	background-color: #3f0000;
+	transition: all 0.6s;
+}
+.dropdown-content a:hover:after
+{
+	content: ' \00bb';
+	transition: all 0.6s;
+}
+.dropdown:hover .dropdown-content
+{
+	display: block;
+	opacity: 1;
+	transition: all 0.6s;
+}
+.dropdown:hover .dropbtn
+{
+    background-color: #3f0000;
+    transition: all 0.6s;
 }
