@@ -142,7 +142,7 @@ figure img
 	width: 76%;
 	color: #e2e2e2;  
 	font-size: 20px;
-    word-break: break-all;
+    word-break: normal;
 	display:table-column;
 	overflow: hidden;
 }
