@@ -90,6 +90,13 @@ figure
 {
 	display:table-row;
 }
+
+
+figure img
+{
+	max-width: 400px !important;
+	max-height: 300px !important;
+}
 #sezione1.pageColumn > * img 
 {
 	display: block;
