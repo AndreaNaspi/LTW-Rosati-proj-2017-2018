@@ -16,8 +16,8 @@
 			<div class="pageColumn" id="darkLeft">
 				<div class="vertical-menu">
 					<a href="index.html">Home</a>
-					<a href="#" id="profile" style="display: none">Profilo</a>
-					<a href="#">Pagina random</a>
+					<a href="#" id="profile"  style="display: none">Profilo</a>
+					<a href="#" id="random" onload="initRandomPage();">Pagina random</a>
 					<a href="#">About</a>
 					<!--<a href="#">Link 4</a>-->
 				</div>
@@ -56,5 +56,13 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		function initRandomPage()
+		{
+			var pages = JSON.parse(localStorage.pages);
+			var random = pages[Math.floor(Math.random()*pages.length)];
+			document.getElementById("profile").href = "articolo.html?id="+"'"+random.id+"'";	
+		}
+	</script>
 </body>
 </html>
