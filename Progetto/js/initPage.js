@@ -67,7 +67,9 @@ function initPage()
         if(pages[i].id.toLowerCase() == id.toLowerCase())
         {
             text = pages[i].text;
-            document.getElementById("text").innerHTML+=text;
+            document.getElementById("title").innerHTML+=pages[i].id;
+            document.getElementById("articleText").innerHTML+=text;
+            document.getElementById("articleImage").src = pages[i].src;
             break;
         }
     }
@@ -107,5 +109,5 @@ function parser()
         link.href="article.html?id="+"'"+pagesInText[i].id+"'";
         text = text.replace(new RegExp(pagesInText[i].id,"i"),link.outerHTML);
     }
-    document.getElementById("text").innerHTML = text;
+    document.getElementById("articleText").innerHTML = text;
 }

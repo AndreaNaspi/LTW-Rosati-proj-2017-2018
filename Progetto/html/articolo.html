@@ -6,8 +6,9 @@
 	 <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
 	 <meta charset="utf-8">
 	 <script src="../js/checkLogin.js" type="text/javascript" async></script>
+	 <script src="../js/initPage.js" type="text/javascript" async></script>
 </head>
-<body onload="updateLogin();">
+<body onload="updateLogin(); initPage(); parser();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -23,12 +24,9 @@
 					</div>
 				</div>
 			<div class="pageColumn" id="text">
-			<h1>Questo è un titolo</h1>
-			<p align="center"><img src="../../immagine.JPG"></p>
-			<h2>Questo è un sottotitolo</h2>
-			<p>
-			Qui andrà il testo dell'articolo che sto scrivendo molto lungo per far vedere come si separano le parole in fin di linea, tutto qua. 
-			</p>
+				<h1 id="title"></h1>
+				<p align="center"><img id="articleImage" src=""></p>
+				<div id="articleText"></div>
 			</div>
 			<div class="pageColumn" id="darkRight">
 				<div class="dropdown">
