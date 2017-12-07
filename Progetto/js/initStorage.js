@@ -19,15 +19,13 @@ STRUTTURA VERSIONE 3.0:
 function init()
 {
     if (typeof(localStorage.pages) == "undefined") 
-    {
         localStorage.pages=JSON.stringify([]);
-    }
+
     if (typeof(localStorage.users) == "undefined") 
-    {
         localStorage.users=JSON.stringify([{username:"admin",email:"admintechwiki@gmail.com",password:"1303378837"}]);
-    }
-    
-    localStorage.logged=JSON.stringify({logged:false, username:""});
+        
+    if (typeof(localStorage.logged) == "undefined")
+        localStorage.logged=JSON.stringify({logged:false, username:""});
     
 
     var newPages = [{id:"HTML", src:"../assets/articleImage/html.jpg", likedBy:[], text:"In informatica html (HTML; traduzione letterale: linguaggio a marcatori per ipertesti) è un linguaggio di markup. Nato per la formattazione e impaginazione di documenti ipertestuali disponibili nel web 1.0, oggi è utilizzato principalmente per il disaccoppiamento della struttura logica di una pagina web (definita appunto dal markup) e la sua rappresentazione, gestita tramite gli stili CSS per adattarsi alle nuove esigenze di comunicazione e pubblicazione all'interno di Internet."},
