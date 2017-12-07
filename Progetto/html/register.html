@@ -17,7 +17,7 @@
 				<div class="vertical-menu">
 					<a href="index.html">Home</a>
 					<a href="#" id="profile"  style="display: none">Profilo</a>
-					<a href="#" id="random" onload="initRandomPage();">Pagina random</a>
+					<a href="#" id="random">Pagina random</a>
 					<a href="#">About</a>
 					<!--<a href="#">Link 4</a>-->
 				</div>
@@ -57,6 +57,8 @@
 		</div>
 	</div>
 	<script>
+		initRandomPage();
+		
 		function initRandomPage()
 		{
 			var pages = JSON.parse(localStorage.pages);

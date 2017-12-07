@@ -19,13 +19,13 @@
 					<div class="vertical-menu">
 						<a href="index.html">Home</a>
 						<a href="#" id="profile" style="display: none">Profilo</a>
-						<a href="#" id="random" onload="initRandomPage();">Pagina random</a>
+						<a href="#" id="random">Pagina random</a>
 						<a href="#">About</a>
 					</div>
 				</div>
 			<div class="pageColumn" id="text">
 				<h1 id="title" style="display:none"></h1>
-				<p align="center" style="display:none"><img id="articleImage" src=""></p>
+				<p align="center"><img id="articleImage" src="" style="display:none"></p>
 				<div id="articleText" style="display:none"></div>
 			</div>
 			<div class="pageColumn" id="darkRight">
@@ -41,6 +41,8 @@
 		</div>
 	</div>
 	<script>
+		initRandomPage();
+
 		function initRandomPage()
 		{
 			var pages = JSON.parse(localStorage.pages);

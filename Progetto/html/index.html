@@ -1,8 +1,8 @@
 <html>
 <head>
 	<title>Home | TecHWiki</title>
+	<META charset="UTF-8">
 	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
-	<meta charset="utf-8">
 	<script src="../js/initStorage.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="../js/HomeFunction.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
@@ -18,7 +18,7 @@
 				<div class="vertical-menu">
 					<a href="index.html" class="active">Home</a>
 					<a href="#" id="profile" style="display: none">Profilo</a>
-					<a href="#" id="random" onload="initRandomPage();">Pagina random</a>
+					<a href="#" id="random">Pagina random</a>
 					<a href="#">About</a>
 				</div>
 			</div>
@@ -28,54 +28,54 @@
 					<div class="pageColumn" id="sezione1L">
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/html.jpg">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/html5.png">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/ajax.jpg">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/jquery.png">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/xml.jpg">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 					</div>
 					<div class="pageColumn" id="sezione1R">
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/javascript.jpg">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/java.png">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/python.jpg">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/c++.jpg">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 						<p class="likeNumber"></p>
 						<figure>
-							<img class="likeImage" src="../assets/articleImage/css.jpg">
+							<img class="likeImage" src="">
 							<figcaption class="likeText"></figcaption>
 						</figure>
 					</div>
@@ -83,27 +83,27 @@
 				<p><h1>Articoli Recentemente Caricati</h1></p>
 				<div class="pageColumn" id="sezione2">
 					<p><figure>
-							<img class="recentImage" src="../assets/articleImage/javascript.jpg">
+							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
 					</p>
 						<p><figure>
-							<img class="recentImage" src="../assets/articleImage/html5.png">
+							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
 					</p>
 					<p><figure>
-							<img class="recentImage" src="../assets/articleImage/ajax.jpg">
+							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
 					</p>
 					<p><figure>
-							<img class="recentImage" src="../assets/articleImage/c++.jpg">
+							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
 					</p>
 					<p><figure>
-							<img class="recentImage" src="../assets/articleImage/css.jpg">
+							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
 					</p>
@@ -121,9 +121,10 @@
 		</div>
 	</div>
 	<script>
+		initRandomPage();
+
 		function initRandomPage()
 		{
-			alert("1");
 			var pages = JSON.parse(localStorage.pages);
 			var random = pages[Math.floor(Math.random()*pages.length)];
 			document.getElementById("random").href = "articolo.html?id="+"'"+random.id+"'";	
