@@ -251,3 +251,8 @@ figure img
     background-color: #3f0000;
     transition: all 0.6s;
 }
+.search
+{
+	position: relative;
+	display: block;
+}
