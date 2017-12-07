@@ -68,8 +68,12 @@ function initPage()
         {
             text = pages[i].text;
             document.getElementById("title").innerHTML+=pages[i].id;
+            document.getElementById("title").style.display = "";
             document.getElementById("articleText").innerHTML+=text;
+            document.getElementById("articleText").style.display = "";
             document.getElementById("articleImage").src = pages[i].src;
+            document.getElementById("articleImage").style.display = "";
+
             break;
         }
     }
