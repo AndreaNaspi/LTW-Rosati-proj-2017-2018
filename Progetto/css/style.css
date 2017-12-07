@@ -91,7 +91,10 @@ figure
 	display:table-row;
 }
 
-
+figure
+{
+	max-width: 400px;
+}
 figure img
 {
 	max-width: 400px !important;
