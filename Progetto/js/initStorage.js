@@ -23,7 +23,7 @@ function init()
 
     if (typeof(localStorage.users) == "undefined") 
         localStorage.users=JSON.stringify([{username:"admin",email:"admintechwiki@gmail.com",password:"1303378837"}]);
-        
+
     if (typeof(localStorage.logged) == "undefined")
         localStorage.logged=JSON.stringify({logged:false, username:""});
     

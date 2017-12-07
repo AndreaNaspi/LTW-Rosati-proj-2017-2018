@@ -95,10 +95,11 @@ function parser()
         return;
     
     var textLower = text.toLowerCase();
+    var words = textLower.split(" ").map(function(value){return value.replace(new RegExp("[\.\,\;\:]","g"),"")});
     var pagesInText = JSON.parse(localStorage.pages).filter(
         function(page)
         {
-            if(page.id.toLowerCase() != id.toLowerCase() && textLower.indexOf(page.id.toLowerCase()) != -1) return true;
+            if(page.id.toLowerCase() != id.toLowerCase() && words.indexOf(page.id.toLowerCase()) != -1) return true;
             return false;
         });
 
@@ -106,7 +107,7 @@ function parser()
     {
         var link = document.createElement("a");   
         link.innerHTML=pagesInText[i].id;
-        link.href="article.html?id="+"'"+pagesInText[i].id+"'";
+        link.href="articolo.html?id="+"'"+pagesInText[i].id+"'";
         text = text.replace(new RegExp(pagesInText[i].id,"i"),link.outerHTML);
     }
     document.getElementById("articleText").innerHTML = text;
