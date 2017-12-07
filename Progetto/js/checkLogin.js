@@ -8,7 +8,7 @@ function updateLogin()
         document.querySelectorAll(".button").forEach(function(value){value.style.display="none";});
         var logout = document.createElement("a");
         logout.href="";
-        logout.innerHTML="<li>Logout</li>";
+        logout.innerHTML="Logout";
         logout.style="text-decoration: none;"
         logout.onclick = 
             function()
@@ -20,8 +20,7 @@ function updateLogin()
                 logout.innerHTML="";
                 logout.parentNode.removeChild(logout);                
             }
-        document.getElementById("listAccount").appendChild(logout);
-
+        document.getElementsByClassName("dropdown-content")[0].appendChild(logout);
     }
     else return;
 }
