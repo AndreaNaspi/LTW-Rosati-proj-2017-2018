@@ -15,6 +15,7 @@ STRUTTURA VERSIONE 3.0:
     è stato aggiunto un nuovo indirizzo a localStorage chiamato localStorage.login che contiene due valori: logged (booleano) e username
     è stato aggiunto un nuovo object a localstorage.pages chiamato src per linkare all'immagine rappresentativa dell'articolo
 **/
+
 function init()
 {
     if (typeof(localStorage.pages) == "undefined") 
@@ -25,10 +26,9 @@ function init()
     {
         localStorage.users=JSON.stringify([{username:"admin",email:"admintechwiki@gmail.com",password:"1303378837"}]);
     }
-    if((typeof(localStorage.users) == "undefined"))
-    {
-        localStorage.logged=JSON.stringify({logged:false, username:""});
-    }
+    
+    localStorage.logged=JSON.stringify({logged:false, username:""});
+    
 
     var newPages = [{id:"HTML", src:"../assets/articleImage/html.jpg", likedBy:[], text:"In informatica html (HTML; traduzione letterale: linguaggio a marcatori per ipertesti) è un linguaggio di markup. Nato per la formattazione e impaginazione di documenti ipertestuali disponibili nel web 1.0, oggi è utilizzato principalmente per il disaccoppiamento della struttura logica di una pagina web (definita appunto dal markup) e la sua rappresentazione, gestita tramite gli stili CSS per adattarsi alle nuove esigenze di comunicazione e pubblicazione all'interno di Internet."},
                     {id:"JavaScript", src:"../assets/articleImage/Javascript.jpg", likedBy:[], text:"In informatica JavaScript è un linguaggio di scripting orientato agli oggetti e agli eventi, comunemente utilizzato nella programmazione Web lato client per la creazione, in siti Web e applicazioni web, di effetti dinamici interattivi tramite funzioni di script invocate da eventi innescati a loro volta in vari modi dall'utente sulla pagina web in uso (mouse, tastiera, caricamento della pagina ecc...)."},

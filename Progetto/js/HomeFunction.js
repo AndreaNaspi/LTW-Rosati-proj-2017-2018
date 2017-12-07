@@ -11,7 +11,7 @@
  *  Dato un user in input ritorna un array di address (per ora non limitato!)  già generati dallo script a cui l'utente in input ha messo like.
  **/
 
-top10Liked();
+
 
 function top10Liked()
 {
