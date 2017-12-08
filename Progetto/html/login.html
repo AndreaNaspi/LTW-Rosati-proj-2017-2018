@@ -5,8 +5,9 @@
 	<script type="text/javascript" src="../js/initUser.js" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
 	<title>Login a TecHWiki</title>
+	<!-- initRandompage a fine html -->
 </head>
-<body onload="updateLogin();">
+<body onload="updateLogin(); initRandompage();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -54,8 +55,6 @@
 		</div>
 	</div>
 	<script>
-		initRandomPage();
-		
 		function initRandomPage()
 		{
 			var pages = JSON.parse(localStorage.pages);
