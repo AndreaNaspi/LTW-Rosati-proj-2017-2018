@@ -83,6 +83,7 @@ function initPage()
         window.open("../html/index.html","_self");                    
         return;
     }
+    parser();
 
 }
 /**

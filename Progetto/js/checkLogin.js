@@ -1,4 +1,4 @@
-function updateLogin()
+function updateLoginStatus()
 {
     var logged =  JSON.parse(localStorage.logged).username;
     if(logged != "")

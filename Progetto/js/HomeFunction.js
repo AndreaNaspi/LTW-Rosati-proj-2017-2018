@@ -13,7 +13,7 @@
 
 
 
-function top10Liked()
+function initTop10Liked()
 {
     var pages = JSON.parse(localStorage.pages);
     pages.sort(function(a,b) { return a.likedBy.length - b.likedBy.length;}).reverse();
@@ -58,7 +58,11 @@ function top10Liked()
     }
 
 }
-
+function recentArticles()
+{
+    
+}
+/*
 function likedByUser(user)
 {
     var pages = JSON.parse(localSTorage.pages);
@@ -72,4 +76,4 @@ function likedByUser(user)
             return link.outerHTMl;
         });
     return pages;
-}
+}*/

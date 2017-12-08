@@ -16,7 +16,7 @@ STRUTTURA VERSIONE 3.0:
     è stato aggiunto un nuovo object a localstorage.pages chiamato src per linkare all'immagine rappresentativa dell'articolo
 **/
 
-function init()
+function initStorage()
 {
     if (typeof(localStorage.pages) == "undefined") 
         localStorage.pages=JSON.stringify([]);
