@@ -9,7 +9,7 @@ function updateLogin()
         var logout = document.createElement("a");
         logout.href="";
         logout.innerHTML="Logout";
-        logout.style="text-decoration: none;"
+        logout.style="text-decoration: none; color: #788CFF;"
         logout.onclick = 
             function()
             {
