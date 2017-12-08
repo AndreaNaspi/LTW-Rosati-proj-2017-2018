@@ -211,7 +211,9 @@ figure img
 .dropbtn
 {
 	background-color: #000000;
+	padding: 7px 9px;
 	font-size: 20px;
+	border-bottom: 4px solid #e2e2e2;
 }
 .dropdown
 {
@@ -220,14 +222,14 @@ figure img
 .dropdown-content
 {
 	position: absolute;
-	height: 0;
+	display: none;
 	border-bottom: 4px solid #e2e2e2;
 	width: 12%;
-	overflow: hidden;
 }
 .dropdown-content a
 {
 	display: block;
+	font-size: 20px;
 }
 .dropdown-content a:hover
 {
@@ -250,9 +252,15 @@ figure img
 {
     background-color: #3f0000;
     transition: all 0.6s;
+    border-bottom: none;
 }
 .search
 {
-	position: relative;
+	margin-top: 3px;
 	display: block;
+}
+.dropdown:hover .search
+{
+	position: relative;
+	margin-top: 55px;
 }
