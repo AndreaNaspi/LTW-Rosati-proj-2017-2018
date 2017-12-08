@@ -98,7 +98,7 @@ function parser()
         return;
     
     var textLower = text.toLowerCase();
-    var words = textLower.split(" ").map(function(value){return value.replace(new RegExp("[\.\,\;\:]","g"),"")});
+    var words = textLower.split(" ").map(function(value){return value.replace(new RegExp("[\.\,\;\:\/]","g"),"")});
     var pagesInText = JSON.parse(localStorage.pages).filter(
         function(page)
         {
@@ -106,12 +106,25 @@ function parser()
             return false;
         });
 
+    //setting the tags in text
+    textLower = text.split(" ");
     for(var i = 0; i < pagesInText.length; i++)
     {
         var link = document.createElement("a");   
         link.innerHTML=pagesInText[i].id;
         link.href="articolo.html?id="+"'"+pagesInText[i].id+"'";
-        text = text.replace(new RegExp(pagesInText[i].id,"i"),link.outerHTML);
+        for(var j = 0; j < textLower.length; j++)
+        {
+            var actualWord = textLower[j].replace(new RegExp("[\.\,\;\:\/]","g"),"");
+
+            if(new RegExp("^"+pagesInText[i].id+"+$","i").test(actualWord))
+            {
+                textLower[j] = textLower[j].replace(new RegExp(pagesInText[i].id,"i"),link.outerHTML);
+                break;
+            }
+        }
     }
+    text = textLower.join(" ");
+
     document.getElementById("articleText").innerHTML = text;
 }
