@@ -31,7 +31,7 @@ function setSearchPosition(bool)
 {
     if(bool == true)
     {
-        var css = '.dropdown:hover{height: 60px;}';
+        var css = '.dropdown:hover{height: 62px;}';
         if(document.getElementsByTagName('style')[0] == undefined)
         {
             var style = document.createElement('style');
@@ -43,7 +43,7 @@ function setSearchPosition(bool)
     }
     else
     {
-        var css = '.dropdown:hover{height: 83px;}';
+        var css = '.dropdown:hover{height: 86px;}';
         if(document.getElementsByTagName('style')[0] == undefined)
         {
             var style = document.createElement('style');
