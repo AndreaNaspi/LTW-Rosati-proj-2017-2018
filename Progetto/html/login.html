@@ -7,7 +7,7 @@
 	<title>Login a TecHWiki</title>
 	<!-- initRandompage a fine html -->
 </head>
-<body onload="updateLogin(); initRandompage();">
+<body onload="updateLogin(); initRandomPage();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -57,7 +57,7 @@
 		{
 			var pages = JSON.parse(localStorage.pages);
 			var random = pages[Math.floor(Math.random()*pages.length)];
-			document.getElementById("profile").href = "articolo.html?id="+"'"+random.id+"'";	
+			document.getElementById("random").href = "articolo.html?id="+"'"+random.id+"'";	
 		}
 	</script>
 </body>
