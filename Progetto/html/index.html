@@ -6,8 +6,9 @@
 	<script src="../js/initStorage.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="../js/HomeFunction.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
+	<!-- initRandomPage a fine html -->
 </head>
-<body onload="init(); updateLogin(); top10Liked();">
+<body onload="init(); updateLogin(); top10Liked(); initRandomPage();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -122,8 +123,6 @@
 		</div>
 	</div>
 	<script>
-		initRandomPage();
-
 		function initRandomPage()
 		{
 			var pages = JSON.parse(localStorage.pages);

@@ -5,10 +5,11 @@
 	<title>Pagina articolo</title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
 	<meta charset="utf-8">
-	<script src="../js/checkLogin.js" type="text/javascript" async></script>
 	<script src="../js/initPage.js" type="text/javascript" async></script>
+	<script src="../js/checkLogin.js" type="text/javascript" async></script>
+	<!-- initRandompage a fine html -->
 </head>
-<body onload="updateLogin(); initPage(); parser();">
+<body onload="updateLogin(); initPage(); parser(); initRandomPage();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -41,11 +42,14 @@
 		</div>
 	</div>
 	<script>
-		initRandomPage();
-
 		function initRandomPage()
 		{
 			var pages = JSON.parse(localStorage.pages);
+			pages = pages.filter(function(value) 
+				{
+					var actualTitle = document.getElementById("title").innerHTML;
+					return value.id.toLowerCase() != actualTitle.toLowerCase();
+				});
 			var random = pages[Math.floor(Math.random()*pages.length)];
 			document.getElementById("random").href = "articolo.html?id="+"'"+random.id+"'";	
 		}
