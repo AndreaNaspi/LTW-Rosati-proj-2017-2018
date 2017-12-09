@@ -17,10 +17,7 @@ html,body{
 	background: -moz-linear-gradient(#3f0000 , #000000) fixed;
 	background: linear-gradient(#3f0000 , #000000) fixed;
 }
-figcaption
-{
-	display: block;
-}
+
 a
 {
 	color: #788CFF;
@@ -58,6 +55,10 @@ figure
 	text-align: left;
 	max-width: 400px;
 	min-width: 400px;
+}
+figcaption
+{
+	display: block;
 }
 figure img
 {
@@ -141,6 +142,7 @@ figure img
 	color: #e2e2e2;  
 	font-size: 20px;
     word-break: normal;
+    word-wrap: break-word;
 	display:table-column;
 	overflow: hidden;
 }

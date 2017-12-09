@@ -7,9 +7,10 @@
  *  La seconda parte aggiorna solo la lista.
  * 
  * 
- * JAVADOC LIKED BY USER:
- *  Dato un user in input ritorna un array di address (per ora non limitato!)  già generati dallo script a cui l'utente in input ha messo like.
- **/
+ * JAVADOC recentArticles:
+ *  Inizializza lo spazio di recent articles nella home con gli ultimi 5 articoli caricati (in ordine), con possibilità di mostrare più articoli se numero articolo > 5 nella pagina 
+    articoliRecenti.html 
+**/
 
 
 
@@ -58,22 +59,32 @@ function initTop10Liked()
     }
 
 }
-function recentArticles()
+function initRecentArticles()
 {
-    
+    var images = document.querySelectorAll('.recentImage');
+    var text = document.querySelectorAll('.recentText');
+    var pages = JSON.parse(localStorage.pages).reverse();
+    for(var i = 0; i < 5; i++)
+    {
+        images[i].src = pages[i].src;
+        var paragraph = document.createElement("p");
+        var link = document.createElement("a");
+        link.href= "articolo.html?id="+"'"+pages[i].id+"'";
+        link.innerHTML+= pages[i].id;
+        paragraph.innerHTML+= link.outerHTML;
+        paragraph.innerHTML+= ": "+pages[i].text.split('.')[0]+"...";
+        text[i].appendChild(paragraph);   
+    }
+    if(pages.length > 5)
+    {
+        var section = document.getElementById("sezione2");
+        var paragraph = document.createElement("p");
+        var button = document.createElement("input");
+        button.type= "button"; 
+        button.value= "Mostra altro"; 
+        button.style= "width:200px; height:50px; font-size:20px; margin-left: 35px;"
+        button.onclick= function () { window.open('articoliRecenti.html','_self'); };
+        section.appendChild(paragraph.appendChild(button));
+    }
+
 }
-/*
-function likedByUser(user)
-{
-    var pages = JSON.parse(localSTorage.pages);
-    pages = pages.filter(function(elem) { return elem.likedBy.indexOf(users.nickname) != -1});
-    pages.map(
-        function(page)
-        {
-            var link = document.createElement("a");
-            link.innerHTML = page.id;
-            link.href = "article.html?id="+"'"+page.id+"'";
-            return link.outerHTMl;
-        });
-    return pages;
-}*/

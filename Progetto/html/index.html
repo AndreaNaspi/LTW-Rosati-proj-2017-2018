@@ -8,7 +8,7 @@
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
 	<!-- initRandomPage a fine html -->
 </head>
-<body onload="initStorage(); updateLoginStatus(); initTop10Liked(); initRandomPage();">
+<body onload="initStorage(); updateLoginStatus(); initTop10Liked(); initRecentArticles(); initRandomPage();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -83,27 +83,32 @@
 				</div>
 				<p><h1>Articoli Recentemente Caricati</h1></p>
 				<div class="pageColumn" id="sezione2">
-					<p><figure>
+					<p>
+						<figure>
 							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
 					</p>
-						<p><figure>
+					<p>
+						<figure>
 							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
 					</p>
-					<p><figure>
+					<p>
+						<figure>
 							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
 					</p>
-					<p><figure>
+					<p>
+						<figure>
 							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
 					</p>
-					<p><figure>
+					<p>
+						<figure>
 							<img class="recentImage" src="">
 							<figcaption class="recentText"></figcaption>
 						</figure>
@@ -118,7 +123,7 @@
 						<a href="register.html" class="button" id="register" value="Registrati" style="text-decoration: none;">Registrati</a>
 					</div>
 				</div>
-				<div class="search"><input id="search" input type="text" name="search" placeholder="Cerca..."></div>
+				<div class="search"><input id="search" type="text" name="search" placeholder="Cerca..."></div>
 			</div>
 		</div>
 	</div>
