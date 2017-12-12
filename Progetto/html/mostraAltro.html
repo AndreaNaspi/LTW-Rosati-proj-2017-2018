@@ -1,0 +1,67 @@
+<html>
+	<!-- commento -->
+<head>
+	<title>Home | TecHWiki</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+	<meta charset="utf-8">
+	<script src="../js/initStorage.js" type="text/javascript" charset="utf-8" async></script>
+	<script src="../js/HomeFunction.js" type="text/javascript" charset="utf-8" async></script>
+	<script src="../js/checkLogin.js" type="text/javascript" async></script>
+</head>
+<body onload="init(); updateLogin(); top10Liked();">
+	<div class="header">
+		<a href="index.html"><img src="../assets/logo.png"></img></a>
+		<p id="techwiki">TecHWiki</p>
+	</div>
+	<div class="page">
+		<div class="pageRow">
+			<div class="pageColumn" id="darkLeft">
+				<div class="vertical-menu">
+					<a href="index.html" class="active">Home</a>
+					<a href="#" id="profile" style="display: none">Profilo</a>
+					<a href="#">Pagina random</a>
+					<a href="#">About</a>
+				</div>
+			</div>
+			<div class="pageColumn" id="text">
+			<div class="pageColumn" id="sezione2">
+					<p><figure>
+							<img class="recentImage" src="../assets/articleImage/javascript.jpg">
+							<figcaption class="recentText"></figcaption>
+						</figure>
+					</p>
+						<p><figure>
+							<img class="recentImage" src="../assets/articleImage/html5.png">
+							<figcaption class="recentText"></figcaption>
+						</figure>
+					</p>
+					<p><figure>
+							<img class="recentImage" src="../assets/articleImage/ajax.jpg">
+							<figcaption class="recentText"></figcaption>
+						</figure>
+					</p>
+					<p><figure>
+							<img class="recentImage" src="../assets/articleImage/c++.jpg">
+							<figcaption class="recentText"></figcaption>
+						</figure>
+					</p>
+					<p><figure>
+							<img class="recentImage" src="../assets/articleImage/css.jpg">
+							<figcaption class="recentText"></figcaption>
+						</figure>
+					</p>
+				</div>
+			</div>
+			<div class="pageColumn" id="darkRight">
+				<div class="dropdown">
+					<div class="dropbtn" id="accountName">Account</div>
+					<div class="dropdown-content">
+    					<a href="login.html" class="button" id="login" value="Effettua il login" style="text-decoration: none;">Login</a>
+						<a href="register.html" class="button" id="register" value="Registrati" style="text-decoration: none;">Registrati</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
