@@ -257,6 +257,7 @@ figure img
 }
 .dropdown:hover
 {
+	transition: all 0.6s;
 	height: 86px;
 }
 .search
