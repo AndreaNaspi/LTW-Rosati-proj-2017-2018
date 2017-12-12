@@ -77,13 +77,13 @@ function initRecentArticles()
     }
     if(pages.length > 5)
     {
-        var section = document.getElementById("sezione2");
+        var section = document.getElementById("sezione1");
         var paragraph = document.createElement("p");
         var button = document.createElement("input");
         button.type= "button"; 
-        button.value= "Mostra altro"; 
-        button.style= "width:200px; height:50px; font-size:20px; margin-left: 35px;"
-        button.onclick= function () { window.open('articoliRecenti.html','_self'); };
+        button.value= "Mostra altri"; 
+        button.style= "width:250px; height:60px; font-size:25px; margin-left: 35px; margin-bottom:20px;"
+        button.onclick= function () { window.open('mostraAltro.html','_self'); };
         section.appendChild(paragraph.appendChild(button));
     }
 

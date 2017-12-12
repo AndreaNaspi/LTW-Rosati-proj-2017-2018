@@ -1,14 +1,14 @@
 <html>
 	<!-- commento -->
 <head>
-	<title>Home | TecHWiki</title>
+	<title>Articolo Recenti | TecHWiki</title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
 	<meta charset="utf-8">
 	<script src="../js/initStorage.js" type="text/javascript" charset="utf-8" async></script>
-	<script src="../js/HomeFunction.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
+	<!-- initRandomPage a fine pagina -->
 </head>
-<body onload="init(); updateLogin(); top10Liked();">
+<body onload="initStorage(); updateLoginStatus(); initRandomPage();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -19,38 +19,41 @@
 				<div class="vertical-menu">
 					<a href="index.html" class="active">Home</a>
 					<a href="#" id="profile" style="display: none">Profilo</a>
-					<a href="#">Pagina random</a>
-					<a href="#">About</a>
+					<a href="#" id="random">Pagina random</a>
+					<a href="about.html">About</a>
 				</div>
 			</div>
 			<div class="pageColumn" id="text">
-			<div class="pageColumn" id="sezione2">
-					<p><figure>
-							<img class="recentImage" src="../assets/articleImage/javascript.jpg">
-							<figcaption class="recentText"></figcaption>
-						</figure>
-					</p>
-						<p><figure>
-							<img class="recentImage" src="../assets/articleImage/html5.png">
-							<figcaption class="recentText"></figcaption>
-						</figure>
-					</p>
-					<p><figure>
-							<img class="recentImage" src="../assets/articleImage/ajax.jpg">
-							<figcaption class="recentText"></figcaption>
-						</figure>
-					</p>
-					<p><figure>
-							<img class="recentImage" src="../assets/articleImage/c++.jpg">
-							<figcaption class="recentText"></figcaption>
-						</figure>
-					</p>
-					<p><figure>
-							<img class="recentImage" src="../assets/articleImage/css.jpg">
-							<figcaption class="recentText"></figcaption>
-						</figure>
-					</p>
-				</div>
+				<p>
+					<figure>
+						<img class="recentImage" src="../assets/articleImage/javascript.jpg">
+						<figcaption class="recentText"></figcaption>
+					</figure>
+				</p>
+				<p>
+					<figure>
+						<img class="recentImage" src="../assets/articleImage/html5.png">
+						<figcaption class="recentText"></figcaption>
+					</figure>
+				</p>
+				<p>
+					<figure>
+						<img class="recentImage" src="../assets/articleImage/ajax.jpg">
+						<figcaption class="recentText"></figcaption>
+					</figure>
+				</p>
+				<p>
+					<figure>
+						<img class="recentImage" src="../assets/articleImage/c++.jpg">
+						<figcaption class="recentText"></figcaption>
+					</figure>
+				</p>
+				<p>
+					<figure>
+						<img class="recentImage" src="../assets/articleImage/css.jpg">
+						<figcaption class="recentText"></figcaption>
+					</figure>
+				</p>
 			</div>
 			<div class="pageColumn" id="darkRight">
 				<div class="dropdown">
@@ -60,8 +63,17 @@
 						<a href="register.html" class="button" id="register" value="Registrati" style="text-decoration: none;">Registrati</a>
 					</div>
 				</div>
+				<div class="search"><input id="search" type="text" name="search" placeholder="Cerca..."></div>
 			</div>
 		</div>
 	</div>
+	<script>
+		function initRandomPage()
+		{
+			var pages = JSON.parse(localStorage.pages);
+			var random = pages[Math.floor(Math.random()*pages.length)];
+			document.getElementById("random").href = "articolo.html?id="+"'"+random.id+"'";	
+		}
+	</script>
 </body>
 </html>
