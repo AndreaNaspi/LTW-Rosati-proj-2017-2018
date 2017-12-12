@@ -83,7 +83,7 @@ function initRecentArticles()
         button.type= "button"; 
         button.value= "Mostra altro"; 
         button.style= "width:200px; height:50px; font-size:20px; margin-left: 35px;"
-        button.onclick= function () { window.open('articoliRecenti.html','_self'); };
+        button.onclick= function () { window.open('mostraAltro.html','_self'); };
         section.appendChild(paragraph.appendChild(button));
     }
 

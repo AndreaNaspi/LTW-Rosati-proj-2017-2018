@@ -64,6 +64,10 @@ figure img
 {
 	max-width: 400px !important;
 	max-height: 300px !important;
+	display: block;
+	margin: auto;
+	width: 400px;
+	height: 300px;
 }
 .header #techwiki
 {
@@ -99,14 +103,6 @@ figure img
 }
 
 
-#sezione1.pageColumn > * img 
-{
-	display: block;
-	margin: auto;
-	width: 400px;
-	height: 300px;
-
-}
 #sezione1.pageColumn
 {
 	height: auto;
@@ -127,13 +123,7 @@ figure img
 	height: auto;
 	width: 100%;	
 }	
-#sezione2.pageColumn > * img
-{
-	display: block;
-	margin: auto;
-	width: 400px;
-	height: 300px;
-}
+
 .pageColumn
 {
 	float:left;
