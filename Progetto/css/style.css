@@ -49,6 +49,12 @@ input
 	border: 3px solid #e2e2e2 ;
 	box-shadow: 1px 0px 1.8px #e2e2e2;
 }
+button
+{
+	background-color: transparent;
+	border: 3px solid #e2e2e2;
+	box-shadow: 1px 0px 1.8px #e2e2e2;
+}
 figure
 {
 	display:inline-block;
@@ -68,6 +74,14 @@ figure img
 	margin: auto;
 	width: 400px;
 	height: 300px;
+}
+.rightaligned
+{
+	float: right;
+}
+.leftaligned
+{
+	float: left;
 }
 .header #techwiki
 {
