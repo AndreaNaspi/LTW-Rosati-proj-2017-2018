@@ -81,7 +81,7 @@ function initRecentArticles()
         var paragraph = document.createElement("p");
         var button = document.createElement("input");
         button.type= "button"; 
-        button.value= "Mostra altri"; 
+        button.value= "Mostra altro"; 
         button.style= "width:250px; height:60px; font-size:25px; margin-left: 35px; margin-bottom:20px;"
         button.onclick= function () { window.open('mostraAltro.html','_self'); };
         section.appendChild(paragraph.appendChild(button));
