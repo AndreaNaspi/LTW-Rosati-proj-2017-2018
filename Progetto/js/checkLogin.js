@@ -20,7 +20,10 @@ function updateLoginStatus()
                 document.querySelectorAll(".button").forEach(function(value){value.style.display="";});
                 logout.innerHTML="";
                 setSearchPosition(false);
-                logout.parentNode.removeChild(logout);                
+                logout.parentNode.removeChild(logout);
+                alert(document.title);
+                if(document.title.toLowerCase().indexOf("profilo") != -1)
+                    window.open("index.html","_self");                
             }
         document.getElementsByClassName("dropdown-content")[0].appendChild(logout);
     }
@@ -39,7 +42,7 @@ function setSearchPosition(bool)
             document.getElementsByTagName('head')[0].appendChild(style);
         }
         else
-            document.getElementsByTagName('style')[0].appendChild(css);
+            document.getElementsByTagName('style')[0].innerHTML+=css;
     }
     else
     {
@@ -51,6 +54,6 @@ function setSearchPosition(bool)
             document.getElementsByTagName('head')[0].appendChild(style);
         }
         else
-            document.getElementsByTagName('style')[0].appendChild(css);
+            document.getElementsByTagName('style')[0].innerHTML+=css;
     }
 }
