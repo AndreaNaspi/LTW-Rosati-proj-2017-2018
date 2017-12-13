@@ -6,8 +6,10 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<script type="text/javascript" src="../js/initUser.js" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
+	<script src="../js/profileFunction.js" type="text/javascript" async></script>
+	<!-- initRandomPage a fine pagina html -->
 </head>
-<body onload="updateLoginStatus(); initRandomPage();">
+<body onload="updateLoginStatus(); initLikedByUser(); initUserInformation(); initRandomPage();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -25,16 +27,20 @@
 			<div class="pageColumn" id="text">
 				<h1>Il tuo profilo</h1>
 				<h3>Il tuo username</h3>
-				<p><input type="text" name="accountName" id="" disabled class="leftligned" value=""><button style="margin-left: 20px;">Modifica</button></p>
-				<hr>
-				<h3>La tua password</h3>
-				<p><input type="password" name="password" id="" disabled class="leftligned" value=""><button style="margin-left: 20px;">Modifica</button></p>
+				<p><input type="text" name="accountName" id="username" class="leftligned" style="width:20%;" disabled><input type="button" id="modificaUsername" value="Modifica" onclick="activeButton(this);" style="margin-left: 20px;"></p>
 				<hr>
 				<h3>La tua email</h3>
-				<p><input type="email" name="accountName" id="" disabled class="leftligned" value=""></p>
-
+				<p><input type="email" autocomplete="off" id="email" class="leftligned" style="width:20%;" disabled><input type="button" id="modificaEmail" value="Modifica" onclick="activeButton(this);" style="margin-left: 20px;"></p>
+				<hr>
+				<h3>Modifica password</h3>
+				<p><input type="password" placeholder="Cliccare modifica per iniziare" autocomplete="off" id="oldPassword" class="leftligned" style="width:25%;" disabled></p>
+				<p><input type="password" placeholder="Cliccare modifica per iniziare" autocomplete="off" id="newPassword" class="leftligned" style="width:25%;" disabled></p>
+				<p><input type="button" id="modificaPassword" value="Modifica" onclick="modificaPassword(this);"></p>
+				
 				<h1>Le pagine che ti piacciono</h1>
+				<ul id="likedByUser" style="display:none">
 
+				</ul>
 			</div>
 			<div class="pageColumn" id="darkRight">
 				<div class="dropdown">
@@ -49,12 +55,14 @@
 		</div>
 	</div>
 	<script>
+		//funzione per inizializzare il random button nel menu laterale
 		function initRandomPage()
 		{
 			var pages = JSON.parse(localStorage.pages);
 			var random = pages[Math.floor(Math.random()*pages.length)];
 			document.getElementById("random").href = "articolo.html?id="+"'"+random.id+"'";	
 		}
+
 	</script>
 </body>
 </html>

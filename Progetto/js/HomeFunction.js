@@ -12,8 +12,6 @@
     articoliRecenti.html 
 **/
 
-
-
 function initTop10Liked()
 {
     var pages = JSON.parse(localStorage.pages);

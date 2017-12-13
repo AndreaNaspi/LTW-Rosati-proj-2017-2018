@@ -21,7 +21,6 @@ function updateLoginStatus()
                 logout.innerHTML="";
                 setSearchPosition(false);
                 logout.parentNode.removeChild(logout);
-                alert(document.title);
                 if(document.title.toLowerCase().indexOf("profilo") != -1)
                     window.open("index.html","_self");                
             }
