@@ -83,6 +83,10 @@ figure img
 {
 	float: left;
 }
+.centered
+{
+	text-align: center;
+}
 .header #techwiki
 {
 	font-style: italic;
