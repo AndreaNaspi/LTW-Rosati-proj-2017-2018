@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Home | TecHWiki</title>
+	<META charset="UTF-8">
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+	<script src="../js/initStorage.js" type="text/javascript" charset="utf-8" async></script>
+	<script src="../js/HomeFunction.js" type="text/javascript" charset="utf-8" async></script>
+	<script src="../js/checkLogin.js" type="text/javascript" async></script>
+	<script src="../js/searchFunction.js" type="text/javascript" charset="utf-8" async></script>	
+	<!-- initRandomPage a fine html -->
+</head>
+<body onload="initStorage(); updateLoginStatus(); initTop10Liked(); initRandomPage(); initRecentArticles(); initSearchField();">
+	<div class="header">
+		<a href="index.html"><img src="../assets/logo.png"></img></a>
+		<p id="techwiki">TecHWiki</p>
+	</div>
+	<div class="page">
+		<div class="pageRow">
+			<div class="pageColumn" id="darkLeft">
+				<div class="vertical-menu">
+					<a href="index.html" class="active">Home</a>
+					<a href="profile.html" id="profile" style="display: none">Profilo</a>
+					<a href="#" id="random">Pagina random</a>
+					<a href="about.html">About</a>
+					<a href="contribute.html" style="display: none">Contribuisci a TecHWiki</a>
+				</div>
+			</div>
+			<div class="pageColumn" id="text">
+				<h1>Risultati</h1>
+				<div class="pageColumn" id="risultati">
+					
+				</div>
+			</div>
+			<div class="pageColumn" id="darkRight">
+				<div class="dropdown">
+					<div class="dropbtn" id="accountName">Account</div>
+					<div class="dropdown-content">
+    					<a href="login.html" class="button" id="login" value="Effettua il login" style="text-decoration: none;">Login</a>
+						<a href="register.html" class="button" id="register" value="Registrati" style="text-decoration: none;">Registrati</a>
+					</div>
+				</div>
+				<div class="search"><input id="search" autocomplete="off" type="text" name="search" placeholder="Cerca..."></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function initRandomPage()
+		{
+			var pages = JSON.parse(localStorage.pages);
+			var random = pages[Math.floor(Math.random()*pages.length)];
+			document.getElementById("random").href = "articolo.html?id="+"'"+random.id+"'";	
+		}
+	</script>
+
+</body>
+</html>
