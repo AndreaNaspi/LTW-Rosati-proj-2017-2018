@@ -4,12 +4,11 @@
 	<title>Pagina articolo</title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
 	<meta charset="utf-8">
-	<script src="../js/initPage.js" type="text/javascript" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
 	<script src="../js/searchFunction.js" type="text/javascript" charset="utf-8" async></script>		
 	<!-- initRandompage a fine html -->
 </head>
-<body onload="updateLoginStatus(); initPage(); initRandomPage(); initSearchField();">
+<body onload="updateLoginStatus(); initRandomPage(); initSearchField();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -21,7 +20,7 @@
 						<a href="index.html">Home</a>
 						<a href="profile.html" id="profile" style="display: none">Profilo</a>
 						<a href="about.html">About</a>
-						<a href="contribute.html" style="display: none" class="active">Contribuisci a TecHWiki</a>
+						<a href="contribute.html" id="contribute" style="display: none" class="active">Contribuisci a TecHWiki</a>
 						<a href="#" id="random">Pagina random</a>
 					</div>
 				</div>
