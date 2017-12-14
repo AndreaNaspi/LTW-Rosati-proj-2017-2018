@@ -4,6 +4,7 @@ function updateLoginStatus()
     if(logged != "")
     {
         document.getElementById("profile").style.display="";
+        document.getElementById("contribute").style.display="";
         document.getElementById("accountName").innerHTML=logged;
         document.querySelectorAll(".button").forEach(function(value){value.style.display="none";});
         var logout = document.createElement("a");
