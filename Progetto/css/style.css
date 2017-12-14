@@ -75,6 +75,12 @@ figure img
 	width: 400px;
 	height: 300px;
 }
+textarea
+{
+	background-color: transparent;
+	resize: none;
+	overflow-y: scroll;
+}
 .rightaligned
 {
 	float: right;
