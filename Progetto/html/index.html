@@ -6,9 +6,10 @@
 	<script src="../js/initStorage.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="../js/HomeFunction.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
+	<script src="../js/searchFunction.js" type="text/javascript" charset="utf-8" async></script>	
 	<!-- initRandomPage a fine html -->
 </head>
-<body onload="initStorage(); updateLoginStatus(); initTop10Liked(); initRandomPage(); initRecentArticles();">
+<body onload="initStorage(); updateLoginStatus(); initTop10Liked(); initRandomPage(); initRecentArticles(); initSearchField();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -123,7 +124,7 @@
 						<a href="register.html" class="button" id="register" value="Registrati" style="text-decoration: none;">Registrati</a>
 					</div>
 				</div>
-				<div class="search"><input id="search" type="text" name="search" placeholder="Cerca..."></div>
+				<div class="search"><input id="search" autocomplete="off" type="text" name="search" placeholder="Cerca..."></div>
 			</div>
 		</div>
 	</div>

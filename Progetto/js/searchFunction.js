@@ -1,5 +1,6 @@
 //import script for the autocomplete
 var head = document.getElementsByTagName("head")[0];
+var language = JSON.parse(localStorage.pages).map(function(value){return value.id;});
 
 var linkcss = document.createElement("link");
 linkcss.href = "../css/jquery-ui.css";
@@ -8,7 +9,7 @@ head.appendChild(linkcss);
 
 var script1 = document.createElement("script");
 var script2 = document.createElement("script");
-script1.src = "JQuery/jquery-3.2.1.min.js"; script2.src = "JQuery/jquery-ui.min.js";
+script1.src = "../js/JQuery/jquery-3.2.1.min.js"; script2.src = "../js/JQuery/jquery-ui.min.js";
 script1.async = "async"; script2.async = "async";
 script1.charset = "utf-8"; script2.charset = "utf-8";
 head.appendChild(script1); head.appendChild(script2);
@@ -16,8 +17,6 @@ head.appendChild(script1); head.appendChild(script2);
 //inizializzazione search
 function initSearchField()
 {
-    var language = JSON.parse(localStorage.pages).map(function(value){return value.id;});
-
     //init autocomplete
     $("#search").autocomplete({
         source: language,
