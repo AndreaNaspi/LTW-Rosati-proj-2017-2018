@@ -76,11 +76,16 @@ function modificaPassword(elem)
             if(users[i].password == hash1)
             {
                 if(text2.value.length < 8 )
+                {
                     alert("La password deve essere minimo di 8 caratteri");
+                    return;
+                }
                 users.push({username:users[i].username, email:users[i].email, password:hash2.toString()});
                 users.splice(i,1);
                 localStorage.users = JSON.stringify(users);
+                alert("Password modificato con successo!");
                 window.location.reload();
+                return;
             }
         }
         alert("Vecchia password sbagliata");
