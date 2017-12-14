@@ -69,7 +69,7 @@ function login()
     //getter dei due campi obbligatori, cambiare gli in base alla struttura html
     var value1 = document.getElementById("nick").value;
     var pass = hashPassword(document.getElementById("pass").value);
-    var ret = JSON.parse(localStorage.users).filter(function(elem) {return (elem.username == value1 || elem.email == value1 ) && (elem.password == pass);}).length;
+    var ret = JSON.parse(localStorage.users).filter(function(elem) {return (elem.username == value1 ) && (elem.password == pass);}).length;
     if(ret == 0)
     {
         alert("Utente non registrato o password errata");
