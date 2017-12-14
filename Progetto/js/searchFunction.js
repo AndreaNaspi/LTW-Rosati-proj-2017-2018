@@ -23,6 +23,9 @@ function initSearchField()
         focus: function (event, ui) { event.preventDefault();}
     });
 
+    //do search on enter click
+    $("#search").keydown(function(event) {eventPress(event);});
+
     //select the words to show
     $.ui.autocomplete.filter = function (array, term) 
     {
@@ -47,4 +50,18 @@ function initSearchField()
                 .append("<div>" + t + "</div>")
                 .appendTo(ul);
     };
+}
+//do search on enter click
+function eventPress(e)
+{
+    if (e.keyCode == 13) 
+    {
+        var searchVal = document.getElementById("search").value;
+        var resultPages = JSON.parse(localStorage.pages).filter(function(value){return new RegExp("^"+searchVal,"i").test(value.id);});
+        if(resultPages.length == 1)
+        {
+            window.open("articolo.html?id="+"'"+resultPages[0].id+"'","_self");
+            return;
+        }
+    }
 }
