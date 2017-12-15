@@ -30,8 +30,8 @@ function initSearchField()
     //select the words to show
     $.ui.autocomplete.filter = function (array, term) 
     {
-        var wordInitial = array.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(term),"i").test(value);});
-        var wordContains = array.filter(function(value) {return value.toLowerCase().indexOf(term) != -1 && wordInitial.indexOf(value) == -1;});
+        var wordInitial = array.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(term)),"i").test(encodeURIComponent(value));});
+        var wordContains = array.filter(function(value) {return value.toLowerCase().indexOf(term.toLowerCase()) != -1 && wordInitial.indexOf(value) == -1;});
         return wordInitial.concat(wordContains);
     };
 
@@ -45,10 +45,10 @@ function initSearchField()
     //highlight the selected words
     $.ui.autocomplete.prototype._renderItem = function (ul, item) 
     {        
-        var t = String(item.value).replace(new RegExp(this.term, "gi"),"<strong style='color:#788CFF'>$&</strong>");
+        var t = String(encodeURIComponent(item.value)).replace(new RegExp(encodeURIComponent(this.term), "gi"),"<strong style='color:#788CFF'>$&</strong>");
         return $("<li></li>")
                 .data("item.autocomplete", item)
-                .append("<div>" + t + "</div>")
+                .append("<div>" + decodeURIComponent(t) + "</div>")
                 .appendTo(ul);
     };
 }
@@ -58,7 +58,7 @@ function eventPressEnter(e)
     if (e.keyCode == 13) 
     {
         var searchVal = document.getElementById("search").value;
-        var resultPages = JSON.parse(localStorage.pages).filter(function(value){return new RegExp("^"+searchVal,"i").test(value.id);});
+        var resultPages = JSON.parse(localStorage.pages).filter(function(value){return new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(searchVal)),"i").test(encodeURIComponent(value.id));});
         if(resultPages.length == 1)
             window.open("articolo.html?id="+"'"+resultPages[0].id+"'","_self");
         else
