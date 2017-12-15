@@ -22,8 +22,12 @@ function updateLoginStatus()
                 logout.innerHTML="";
                 setSearchPosition(false);
                 logout.parentNode.removeChild(logout);
-                if(document.title.toLowerCase().indexOf("profilo") != -1)
-                    window.open("index.html","_self");                
+                if(document.title.toLowerCase().indexOf("profilo") != -1 || document.title.toLowerCase().indexOf("contribuisci") != -1)
+                {
+                     open("index.html", "_self");
+                     return false;
+                }
+                return true;
             }
         document.getElementsByClassName("dropdown-content")[0].appendChild(logout);
     }
