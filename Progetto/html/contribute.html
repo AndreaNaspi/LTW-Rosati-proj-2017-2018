@@ -25,10 +25,13 @@
 				</div>
 			<div class="pageColumn" id="text">
 				<h1 id="title">Contribuisci a TecHWiki</h1>
-				<form>
-					<p align="center">Titolo: <input type="text" id="newTitle" name="title" placeholder="Dai un titolo al tuo articolo" size="50%"></p>
-					<p align="center">Immagine: <input type="file" id="newImage" name="articleImage" placeholder="Seleziona un'immagine rappresentativa per il tuo articolo" style="width: 50%" accept="image/*"></p>
-					<p align="center"><textarea id="newText" name="articleText" cols="125" rows="20" placeholder="Inserisci qui il testo del tuo articolo"></textarea></p>
+				<form onsubmit="return checkSubmit();">
+					<p align="center">Titolo: <input type="text" id="newTitle" name="title" autocomplete="off" placeholder="Dai un titolo al tuo articolo" size="50%" required></p>
+					
+					<p align="center">Immagine: <input type="file" id="newImage" name="articleImage" autocomplete="off" placeholder="Seleziona un'immagine rappresentativa per il tuo articolo" style="width: 50%" accept="image/*" required></p>
+					
+					<p align="center"><textarea id="newText" name="articleText" autocomplete="off" cols="125" rows="20" placeholder="Inserisci qui il testo del tuo articolo (minimo 3 righe!)" required></textarea></p>
+					
 					<p align="center"><input type="submit" name="publish" value="Pubblica il tuo articolo*"></p>
 				</form>
 				<hr>
@@ -57,6 +60,33 @@
 				});
 			var random = pages[Math.floor(Math.random()*pages.length)];
 			document.getElementById("random").href = "articolo.html?id="+"'"+random.id+"'";	
+		}
+		function checkSubmit()
+		{
+			var pages = JSON.parse(localStorage.pages);
+			var newTitle = document.getElementById("newTitle").value;
+			var newImageType = document.getElementById("newImage").files[0]['type'];
+			var newText = document.getElementById("newText").value;
+			//controllo se l'articolo esiste
+			if(pages.filter(function(value){return value.id.toLowerCase() == newTitle.toLowerCase();}).length > 0)
+			{
+				alert("Articolo riguardante il titolo già presente sul sito.");
+				return false;
+			}
+			//controllo che il file selezionato è un immagine
+			 if(newImageType.split('/')[0]!='image')
+			 {
+       			alert("Il file selezionato non è un immagine!");
+       			return false;
+    		 }
+			//conto il numero di linee nella textarea (minimo 3)
+			if(newText.length < 207)
+			{
+				alert("Il testo dell'articolo deve essere di almeno tre righe.");
+				return false;
+			}
+			alert("Richiesta inviata con successo!");
+			return true;
 		}
 	</script>
 </body>
