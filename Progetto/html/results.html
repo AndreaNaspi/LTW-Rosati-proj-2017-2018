@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Home | TecHWiki</title>
+	<title>Risultati | TecHWiki</title>
 	<META charset="UTF-8">
 	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
 	<script src="../js/initStorage.js" type="text/javascript" charset="utf-8" async></script>
@@ -9,7 +9,7 @@
 	<script src="../js/searchFunction.js" type="text/javascript" charset="utf-8" async></script>	
 	<!-- initRandomPage a fine html -->
 </head>
-<body onload="initStorage(); updateLoginStatus(); initTop10Liked(); initRandomPage(); initRecentArticles(); initSearchField();">
+<body onload="updateLoginStatus(); initRandomPage(); initSearchField();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -20,9 +20,9 @@
 				<div class="vertical-menu">
 					<a href="index.html" class="active">Home</a>
 					<a href="profile.html" id="profile" style="display: none">Profilo</a>
-					<a href="about.html">About</a>
 					<a href="contribute.html" id="contribute" style="display: none">Contribuisci a TecHWiki</a>
 					<a href="#" id="random">Pagina random</a>
+					<a href="about.html">About</a>
 				</div>
 			</div>
 			<div class="pageColumn" id="text">

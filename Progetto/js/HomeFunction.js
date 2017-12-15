@@ -28,29 +28,29 @@ function initTop10Liked()
         var actualIndex = i;
         //set left element
         index[actualIndex].innerHTML += (counter+1)+")";
-        images[actualIndex].src = pages[actualIndex].src;
+        images[actualIndex].src = pages[counter].src;
         var paragraph = document.createElement("p");
         //create title link
         var link = document.createElement("a");
-        link.href= "articolo.html?id="+"'"+pages[actualIndex].id+"'";
-        link.innerHTML+= pages[actualIndex].id;
+        link.href= "articolo.html?id="+"'"+pages[counter].id+"'";
+        link.innerHTML+= pages[counter].id;
         paragraph.innerHTML+= link.outerHTML;
         //append first 10 word to appendices
-        paragraph.innerHTML+= ": "+pages[actualIndex].text.split('.')[0]+"...";
+        paragraph.innerHTML+= ": "+pages[counter].text.split('.')[0]+"...";
         text[actualIndex].appendChild(paragraph);      
         
         var actualIndex = i+5;
         //set right element
         index[actualIndex].innerHTML += (counter+2)+")";
-        images[actualIndex].src = pages[actualIndex].src;
+        images[actualIndex].src = pages[counter+1].src;
         var paragraph = document.createElement("p");
         //create title link
         var link = document.createElement("a");
-        link.href= "articolo.html?id="+"'"+pages[actualIndex].id+"'";
-        link.innerHTML+= pages[actualIndex].id;
+        link.href= "articolo.html?id="+"'"+pages[counter+1].id+"'";
+        link.innerHTML+= pages[counter+1].id;
         paragraph.innerHTML+= link.outerHTML;
         //append first 10 word to appendices
-        paragraph.innerHTML+= ": "+pages[actualIndex].text.split('.')[0]+"...";
+        paragraph.innerHTML+= ": "+pages[counter+1].text.split('.')[0]+"...";
         text[actualIndex].appendChild(paragraph);
         
         counter+=2;

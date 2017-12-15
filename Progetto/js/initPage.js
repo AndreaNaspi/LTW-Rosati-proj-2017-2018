@@ -73,6 +73,7 @@ function initPage()
             document.getElementById("articleText").style.display = "";
             document.getElementById("articleImage").src = pages[i].src;
             document.getElementById("articleImage").style.display = "";
+            document.getElementById("like").style.display= "";
             break;
         }
     }
