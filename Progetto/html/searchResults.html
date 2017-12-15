@@ -9,7 +9,7 @@
 	<script src="../js/searchFunction.js" type="text/javascript" charset="utf-8" async></script>	
 	<!-- initRandomPage a fine html -->
 </head>
-<body onload="updateLoginStatus(); initRandomPage(); initSearchField();">
+<body onload="updateLoginStatus(); initRandomPage(); initSearchField(); initSearchResults();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>
@@ -26,7 +26,10 @@
 				</div>
 			</div>
 			<div class="pageColumn" id="text">
-				<h1>Risultati</h1>
+				<h1 id="searchTitle">Risultati di ricerca per </h1>
+				<ul id="searchResults">
+
+				</ul>
 			</div>
 			<div class="pageColumn" id="darkRight">
 				<div class="dropdown">
