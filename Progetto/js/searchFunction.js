@@ -1,7 +1,5 @@
 //import script for the autocomplete
 var head = document.getElementsByTagName("head")[0];
-var pages = JSON.parse(localStorage.pages);
-var language = pages.map(function(value){return value.id;});
 
 var linkcss = document.createElement("link");
 linkcss.href = "../css/jquery-ui.css";
@@ -18,10 +16,13 @@ head.appendChild(script1); head.appendChild(script2);
 //inizializzazione search
 function initSearchField()
 {
+    var pages = JSON.parse(localStorage.pages);
+    var language = pages.map(function(value){return value.id;});
     //init autocomplete
     $("#search").autocomplete({
         source: language,
-        focus: function (event, ui) { event.preventDefault();}
+        focus: function (event, ui) { event.preventDefault();},
+        select: function (event, ui) { window.open("articolo.html?id="+"'"+ui.item.value+"'","_self"); }
     });
 
     //do search on enter click
@@ -69,6 +70,7 @@ function eventPressEnter(e)
 //funzione utilizzata solo nella pagina searchResults.html per inizializzare i risultati ottenuti dalla ricerca dalla query string generata in eventPressEnter
 function initSearchResults()
 {
+    var pages = JSON.parse(localStorage.pages);
     var queryString = decodeURIComponent(window.location.search);
     if(queryString.indexOf("?") == -1)
     {
