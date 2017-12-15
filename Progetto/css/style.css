@@ -216,6 +216,10 @@ textarea
 	max-height: 480px;
 	box-shadow:3px 3px 7px 3px #e2e2e2;
 }
+#text.pagecolumn input
+{
+	margin-top: 7px;
+}
 #darkRight.pageColumn
 {
 	background-color:black;
