@@ -22,6 +22,10 @@ a
 {
 	color: #788CFF;
 }
+textarea
+{
+	width: 100%;
+}
 a *
 {
 	color: #788CFF;
