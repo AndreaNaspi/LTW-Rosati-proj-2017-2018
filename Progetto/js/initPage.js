@@ -90,7 +90,7 @@ function initPage()
 /**
 Funzione chiamata dopo aver aggiornato in modo dinamico il testo della pagina (quindi deve essere chiamata onload MA DOPO la prima funzione). 
 Tale funzione analizza le pagine salvate in local storage e se trova una pagina che ha almeno un riferimento (non case sensitive) nel testo dell'articolo. Quel
-riferimento (SOLO LA PRIMA OCCORRENZA a richiesta di zottolino) diverrà un link (tag <a>) sempre alla pagina article.html ma con query string rappresentate l'id del riferimento.
+riferimento (SOLO LA PRIMA OCCORRENZA) diverrà un link (tag <a>) sempre alla pagina article.html ma con query string rappresentate l'id del riferimento.
 Esempio: se nel testo ho la parola "javascript" e nel local storage  ho l'articolo "JavaScript" la parola "javascript" diverrà
 un link ad article.html con query string "?id=javascript" (query string sempre generata dal metodo in modo dinamico). 
 **/
