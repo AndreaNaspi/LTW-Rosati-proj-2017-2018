@@ -59,7 +59,10 @@ function eventPressEnter(e)
     if (e.keyCode == 13) 
     {
         var searchVal = document.getElementById("search").value;
-        var resultPages = JSON.parse(localStorage.pages).filter(function(value){return new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(searchVal)),"i").test(encodeURIComponent(value.id));});
+        var array = JSON.parse(localStorage.pages);
+        var wordInitial = array.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(searchVal)),"i").test(encodeURIComponent(value.id));});
+        var wordContains = array.filter(function(value) {return value.id.toLowerCase().indexOf(searchVal.toLowerCase()) != -1 && wordInitial.indexOf(value) == -1;});
+        var resultPages = wordInitial.concat(wordContains);
         if(resultPages.length == 1)
             window.open("articolo.html?id="+"'"+resultPages[0].id+"'","_self");
         else
@@ -82,7 +85,7 @@ function initSearchResults()
     document.getElementById("searchTitle").innerHTML +="\""+searchName+"\"";
 
     //obtain results
-    var wordInitial = pages.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(searchName),"i").test(value.id);});
+    var wordInitial = pages.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(searchName)+"+$","i").test(value.id);});
     var wordContains = pages.filter(function(value) {return value.id.toLowerCase().indexOf(searchName) != -1 && wordInitial.indexOf(value) == -1;});
     var resultsPages = wordInitial.concat(wordContains);
     var listResults = document.getElementById("searchResults");

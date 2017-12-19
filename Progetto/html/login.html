@@ -58,7 +58,7 @@
 		function initRandomPage()
 		{
 			var pages = JSON.parse(localStorage.pages);
-			var random = pages[Math.floor(Math.random()*pages.length)];
+			var random = pages[Math.floor(Math.random()*(pages.length+1))];
 			document.getElementById("random").href = "articolo.html?id="+"'"+random.id+"'";	
 		}
 	</script>

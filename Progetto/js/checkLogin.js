@@ -11,12 +11,12 @@ function updateLoginStatus()
         logout.href="";
         logout.innerHTML="Logout";
         logout.style="text-decoration: none; color: #788CFF;"
+        document.getElementsByClassName("dropdown-content")[0].appendChild(logout);
         setSearchPosition(true);
         logout.onclick = 
             function()
             {
-                localStorage.logged=JSON.stringify({logged:false, username:""});
-                document.getElementById("profile").style.display="none";      
+                localStorage.logged=JSON.stringify({logged:false, username:""});   
                 document.getElementById("accountName").innerHTML="Account";
                 document.querySelectorAll(".button").forEach(function(value){value.style.display="";});
                 logout.innerHTML="";
@@ -24,12 +24,12 @@ function updateLoginStatus()
                 logout.parentNode.removeChild(logout);
                 if(document.title.toLowerCase().indexOf("profilo") != -1 || document.title.toLowerCase().indexOf("contribuisci") != -1)
                 {
-                     open("index.html", "_self");
-                     return false;
+                    open("index.html", "_self");
+                    return false;
                 }
                 return true;
             }
-        document.getElementsByClassName("dropdown-content")[0].appendChild(logout);
+
     }
     else return;
 }

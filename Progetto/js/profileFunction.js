@@ -38,11 +38,6 @@ function activeButton(elem)
                 }
                 else
                 {
-                    if(!(document.getElementById("email").checkValidity()))
-                    {
-                        alert("Inserire un indirizzo email valido.");
-                        return;
-                    }
                     users.push({username:users[i].username, email:document.getElementById("email").value, password:users[i].password.toString()});
                     users.splice(i,1);
                     document.getElementById("email").disabled = "disabled";

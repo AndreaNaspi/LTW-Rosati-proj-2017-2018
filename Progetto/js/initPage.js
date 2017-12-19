@@ -98,7 +98,7 @@ function parser()
 {
     if(text == "")
         return;
-    
+
     var textLower = text.toLowerCase();
     var words = textLower.split(" ").map(function(value){return value.replace(new RegExp("[\.\,\;\:\/]","g"),"")});
     var pagesInText = JSON.parse(localStorage.pages).filter(
@@ -117,7 +117,7 @@ function parser()
         link.href="articolo.html?id="+"'"+pagesInText[i].id+"'";
         for(var j = 0; j < textLower.length; j++)
         {
-            var actualWord = textLower[j].replace(new RegExp("[\.\,\;\:\/]","g"),"");
+            var actualWord = textLower[j].replace(new RegExp("[\'\"\.\,\;\:\/]","g"),"");
 
             if(new RegExp("^"+pagesInText[i].id+"+$","i").test(actualWord))
             {

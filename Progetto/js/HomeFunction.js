@@ -84,5 +84,4 @@ function initRecentArticles()
         button.onclick= function () { window.open('mostraAltro.html','_self'); };
         section.appendChild(paragraph.appendChild(button));
     }
-
 }
