@@ -74,11 +74,11 @@
 				return false;
 			}
 			//controllo che il file selezionato è un immagine
-			 if(newImageType.split('/')[0]!='image')
-			 {
-       			alert("Il file selezionato non è un immagine!");
-       			return false;
-    		 }
+			if(newImageType.split('/')[0]!='image')
+			{
+				alert("Il file selezionato non è un immagine!");
+				return false;
+    		}
 			alert("Richiesta inviata con successo!");
 			return true;
 		}
