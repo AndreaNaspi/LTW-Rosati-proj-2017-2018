@@ -1,5 +1,4 @@
 <html>
-	<!-- commento -->
 <head>
 	<title>Articolo | TecHWiki</title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
@@ -8,8 +7,9 @@
 	<script src="../js/initPage.js" type="text/javascript" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
 	<script src="../js/searchFunction.js" type="text/javascript" charset="utf-8" async></script>		
-	<!-- initRandompage a fine html -->
-	<!-- initLikeButton e checkLikedStatus a fine html -->
+	<!-- updateLoginStatus aggiorna le informazioni sull'utente loggato, initRandomPage (a fine pagine html) setta l'azione del button "Pagina random" e initSearchField permette di inizializzare la ricerca tramite autocomplete -->
+	<!-- initPage serve per inizializzare la pagina in modo dinamico -->
+	<!-- a fine html ci sono due funzioni per gestire i like agli articoli: checkLikedStatus e initLikeButton -->
 </head>
 <body onload="updateLoginStatus(); initPage(); initRandomPage(); initSearchField(); checkLikedStatus();">
 	<div class="header">

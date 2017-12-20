@@ -1,4 +1,6 @@
-//import script for the autocomplete
+/**
+Questa prima sezione, eseguita onload dello script, aggiunge i script necessari per jquery nel tag head
+**/
 var head = document.getElementsByTagName("head")[0];
 
 var linkcss = document.createElement("link");
@@ -13,7 +15,9 @@ script2.async = "async";
 script2.charset = "utf-8";
 head.appendChild(script2);
 
-//inizializzazione search
+/**
+Questa prima funzione inizializza il campo per la ricerca in modo da far funzione la finestra di autocomplete, con il giusto filter e highlight (tramite JQuery widget)
+**/
 function initSearchField()
 {
     var pages = JSON.parse(localStorage.pages);
@@ -54,7 +58,9 @@ function initSearchField()
                 .appendTo(ul);
     };
 }
-//do search on enter click
+/**
+Questa funzione gestisce la ricerca sulla pressione dell'invio, se la pagina trovata è singola si viene reindirizzato subito ad essa, altrimenti alla pagina searchResults.html
+**/
 function eventPressEnter(e, bool)
 {
     if (e.keyCode == 13 || bool == true) 
@@ -72,7 +78,9 @@ function eventPressEnter(e, bool)
     }
 }
 
-//funzione utilizzata solo nella pagina searchResults.html per inizializzare i risultati ottenuti dalla ricerca dalla query string generata in eventPressEnter
+/**
+Questa funzione è utilizzata in searchResults.html per inizializzare la lista di pagine trovate tramite la ricerca (valore di recerca passato tramite query string)
+**/
 function initSearchResults()
 {
     var pages = JSON.parse(localStorage.pages);

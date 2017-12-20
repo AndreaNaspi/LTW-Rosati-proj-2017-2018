@@ -1,5 +1,4 @@
 <html>
-	<!-- commento -->
 <head>
 	<title>Articolo Recenti | TecHWiki</title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
@@ -8,9 +7,10 @@
 	<script src="../js/initStorage.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
 	<script src="../js/searchFunction.js" type="text/javascript" charset="utf-8" async></script>		
-	<!-- initRandomPage e initRecentArticles a fine pagina -->
+	<!-- updateLoginStatus aggiorna le informazioni sull'utente loggato, initRandomPage (a fine pagine html) setta l'azione del button "Pagina random" e initSearchField permette di inizializzare la ricerca tramite autocomplete -->
+	<!-- initRecentArticles (a fine html) si occupa di generare, in ordine, gli ultimi articoli pubblicati (7 per volta). Se, oltre agli articoli generati, ce ne sono altri da generare compare un button dinamico "mostra altro" che richiama tale funzione -->
 </head>
-<body onload="initStorage(); updateLoginStatus(); initRandomPage(); initRecentArticles(); initSearchField();">
+<body onload="updateLoginStatus(); initRandomPage(); initRecentArticles(); initSearchField();">
 	<div class="header">
 		<a href="index.html"><img src="../assets/logo.png"></img></a>
 		<p id="techwiki">TecHWiki</p>

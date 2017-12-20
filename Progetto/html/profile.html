@@ -9,7 +9,8 @@
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
 	<script src="../js/profileFunction.js" type="text/javascript" async></script>
 	<script src="../js/searchFunction.js" type="text/javascript" charset="utf-8" async></script>		
-	<!-- initRandomPage a fine pagina html -->
+	<!-- updateLoginStatus aggiorna le informazioni sull'utente loggato, initRandomPage (a fine pagine html) setta l'azione del button "Pagina random" e initSearchField permette di inizializzare la ricerca tramite autocomplete -->
+	<!-- initLikedByUser e initUserInformation sono funzioni di profileFunction.js per inizializzare i vari campi della pagina -->
 </head>
 <body onload="updateLoginStatus(); initLikedByUser(); initUserInformation(); initRandomPage(); initSearchField();">
 	<div class="header">

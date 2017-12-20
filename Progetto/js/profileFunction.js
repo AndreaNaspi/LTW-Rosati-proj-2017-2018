@@ -1,4 +1,6 @@
-//funzione per gestire la modifica di username e email tramite il button
+/**
+Funzione per gestire il button modifica o il button savla e l'ipotetico aggiornamento del local storage con la nuova modifica
+**/
 function activeButton(elem)
 {
     if(elem.value == "Modifica")
@@ -59,7 +61,9 @@ function activeButton(elem)
         window.location.reload(); 
     }
 }
-//funzione per gestire la modifica della password (hashPassword from initUser)
+/**
+Questa funzione gestisce il button per la modifica della password con l'ipotetico aggiornamento della password in local storage (password hashata tramite lo script in initUser.js)
+**/
 function modificaPassword(elem)
 {
     var text1 = document.getElementById("oldPassword");
@@ -96,7 +100,9 @@ function modificaPassword(elem)
         alert("Vecchia password sbagliata");
     }
 }
-//funzione per inizializzare le informazioni utente
+/**
+Questa funzione di comodo inserisce i dati dell'utente negli appositi campi in profilo.html
+**/
 function initUserInformation()
 {
     var logged = JSON.parse(localStorage.logged);
@@ -104,7 +110,9 @@ function initUserInformation()
     document.getElementById("username").value = user.username;
     document.getElementById("email").value = user.email;
 }
-//funzione per inizializzare le pagine che piacciono all'utente
+/**
+Questa funzione inizializza la parte finale di profilo.html con la lista di pagine a cui l'utente ha messo like
+**/
 function initLikedByUser()
 {
     var pages = JSON.parse(localStorage.pages);

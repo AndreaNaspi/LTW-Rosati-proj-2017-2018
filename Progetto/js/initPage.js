@@ -1,11 +1,3 @@
-/**
-Questa pagina contiene i due script per gestire la generazione dinamica della pagina riguardante l'articolo. Infatti dovranno essere eseguiti onload della pagina riguardante l'articolo.
-Attualmente la funzione initPage riguarda solo il setting dinamico del text (campo presente nel local storage), facilmente estendibile ad immagine rappresentativa dell'articolo e altro (sarà aggiornata in seguito).
-
-
-PER IL GIUSTO FUNZIONAMENTO DEI DUE METODI è NECESSARIO RISPETTARE, OLTRE A QUELLO SPECIFICATO NEI DUE JAVADOC, LA STRUTTURA DEL LOCAL STORAGE SPECIFICATA IN INITSTORAGE.JS (che sarà aggiornata con il tempo insieme a questi metodi)
-**/
-
 var id, text;
 var otherData;
 /**

@@ -1,3 +1,6 @@
+/**
+    questa funzione, nel caso in cui l'utente ha effettuato il login, aggiorna il menù laterale sinistro e il menù destro con nuove funzionalità
+**/
 function updateLoginStatus()
 {
     var logged =  JSON.parse(localStorage.logged).username;
@@ -34,6 +37,9 @@ function updateLoginStatus()
     else return;
 }
 
+/**
+    Questa funzione di comodo aggiorna il css del input text della ricerca quando viene effettuato il cambiamento del menù account
+**/
 function setSearchPosition(bool)
 {
     if(bool == true)

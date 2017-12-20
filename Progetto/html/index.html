@@ -8,7 +8,9 @@
 	<script src="../js/HomeFunction.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="../js/checkLogin.js" type="text/javascript" async></script>
 	<script src="../js/searchFunction.js" type="text/javascript" charset="utf-8" async></script>	
-	<!-- initRandomPage a fine html -->
+	<!-- initStorage funzione essenziale per inizializzare il local storage con le informazioni di demo (presente in initStorage.js). Eseguita onload solo su questa pagina. -->
+	<!-- updateLoginStatus aggiorna le informazioni sull'utente loggato, initRandomPage (a fine pagine html) setta l'azione del button "Pagina random" e initSearchField permette di inizializzare la ricerca tramite autocomplete -->
+	<!-- initTop10Liked e initRecentArticles del file homeFunction.js vengono eseguite per inizializzare i due spazi di presentazione in home -->
 </head>
 <body onload="initStorage(); updateLoginStatus(); initTop10Liked(); initRandomPage(); initRecentArticles();initSearchField();">
 	<div class="header">
