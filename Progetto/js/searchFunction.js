@@ -31,7 +31,8 @@ function initSearchField()
     //select the words to show
     $.ui.autocomplete.filter = function (array, term) 
     {
-        var wordInitial = array.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(term)),"i").test(encodeURIComponent(value));});
+        var wordInitial = array.filter(function(value) {return value.toLowerCase() == term.toLowerCase();});        
+        wordInitial = wordInitial.concat(array.filter(function(value) {return wordInitial.indexOf(value) == -1 && new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(term)),"i").test(encodeURIComponent(value));}));
         var wordContains = array.filter(function(value) {return value.toLowerCase().indexOf(term.toLowerCase()) != -1 && wordInitial.indexOf(value) == -1;});
         return wordInitial.concat(wordContains);
     };
@@ -60,7 +61,8 @@ function eventPressEnter(e, bool)
     {
         var searchVal = document.getElementById("search").value;
         var array = JSON.parse(localStorage.pages);
-        var wordInitial = array.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(searchVal)),"i").test(encodeURIComponent(value.id));});
+        var wordInitial =  array.filter(function(value) {return value.id.toLowerCase() == searchVal.toLowerCase();});     
+        wordInitial = wordInitial.concat(array.filter(function(value) {return wordInitial.indexOf(value) == -1 && new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(searchVal)),"i").test(encodeURIComponent(value.id));}));
         var wordContains = array.filter(function(value) {return value.id.toLowerCase().indexOf(searchVal.toLowerCase()) != -1 && wordInitial.indexOf(value) == -1;});
         var resultPages = wordInitial.concat(wordContains);
         if(resultPages.length == 1)
@@ -81,11 +83,12 @@ function initSearchResults()
         window.open("../html/index.html","_self");                    
         return;
     }
-    var searchName = queryString.replace(new RegExp("[\"\'?]","g"),"").split("=")[1];
+    var searchName = queryString.replace(new RegExp("[\"\'?]","g"),"").split("=")[1].toLowerCase();
     document.getElementById("searchTitle").innerHTML +="\""+searchName+"\"";
 
     //obtain results
-    var wordInitial = pages.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(searchName.toLowerCase())+"+$","i").test(value.id.toLowerCase());});
+    var wordInitial =  pages.filter(function(value) {return value.id.toLowerCase() == searchName.toLowerCase();});         
+    wordInitial = wordInitial.concat(pages.filter(function(value) {return (wordInitial.indexOf(value) == -1) && (new RegExp("^"+searchName,"i").test(value.id));}));
     var wordContains = pages.filter(function(value) {return value.id.toLowerCase().indexOf(searchName.toLowerCase()) != -1 && wordInitial.indexOf(value) == -1;});
     var resultsPages = wordInitial.concat(wordContains);
     var listResults = document.getElementById("searchResults");
