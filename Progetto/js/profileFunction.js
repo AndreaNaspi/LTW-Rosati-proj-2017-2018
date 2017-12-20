@@ -30,6 +30,11 @@ function activeButton(elem)
             {
                 if(elem.id == "modificaUsername")
                 {
+                    if(document.getElementById("username").value.replace(new RegExp(" ","g"),"").length == 0)
+                    {
+                        alert("Il nuovo username non deve essere vuoto!");
+                        return;
+                    }
                     users.push({username:document.getElementById("username").value, email:users[i].email, password:users[i].password.toString()});
                     users.splice(i,1);
                     document.getElementById("username").disabled = "disabled";
@@ -38,6 +43,11 @@ function activeButton(elem)
                 }
                 else
                 {
+                    if(document.getElementById("email").value.replace(new RegExp(" ","g"),"").length == 0)
+                    {
+                        alert("La nuova email non deve essere vuota!");
+                        return;
+                    }
                     users.push({username:users[i].username, email:document.getElementById("email").value, password:users[i].password.toString()});
                     users.splice(i,1);
                     document.getElementById("email").disabled = "disabled";

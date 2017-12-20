@@ -8,10 +8,10 @@ head.appendChild(linkcss);
 
 var script1 = document.createElement("script");
 var script2 = document.createElement("script");
-script1.src = "../js/JQuery/jquery-3.2.1.min.js"; script2.src = "../js/JQuery/jquery-ui.min.js";
-script1.async = "async"; script2.async = "async";
-script1.charset = "utf-8"; script2.charset = "utf-8";
-head.appendChild(script1); head.appendChild(script2);
+script2.src = "../js/JQuery/jquery-ui.min.js";
+script2.async = "async";
+script2.charset = "utf-8";
+head.appendChild(script2);
 
 //inizializzazione search
 function initSearchField()
@@ -22,11 +22,11 @@ function initSearchField()
     $("#search").autocomplete({
         source: language,
         focus: function (event, ui) { event.preventDefault();},
-        select: function (event, ui) { window.open("articolo.html?id="+"'"+ui.item.value+"'","_self"); }
+        select: function (event, ui) { eventPressEnter(event,true); }
     });
 
     //do search on enter click
-    $("#search").keydown(function(event) {eventPressEnter(event);});
+    $("#search").keydown(function(event) {eventPressEnter(event, false);});
 
     //select the words to show
     $.ui.autocomplete.filter = function (array, term) 
@@ -54,9 +54,9 @@ function initSearchField()
     };
 }
 //do search on enter click
-function eventPressEnter(e)
+function eventPressEnter(e, bool)
 {
-    if (e.keyCode == 13) 
+    if (e.keyCode == 13 || bool == true) 
     {
         var searchVal = document.getElementById("search").value;
         var array = JSON.parse(localStorage.pages);
@@ -85,8 +85,8 @@ function initSearchResults()
     document.getElementById("searchTitle").innerHTML +="\""+searchName+"\"";
 
     //obtain results
-    var wordInitial = pages.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(searchName)+"+$","i").test(value.id);});
-    var wordContains = pages.filter(function(value) {return value.id.toLowerCase().indexOf(searchName) != -1 && wordInitial.indexOf(value) == -1;});
+    var wordInitial = pages.filter(function(value) {return new RegExp("^"+$.ui.autocomplete.escapeRegex(searchName.toLowerCase())+"+$","i").test(value.id.toLowerCase());});
+    var wordContains = pages.filter(function(value) {return value.id.toLowerCase().indexOf(searchName.toLowerCase()) != -1 && wordInitial.indexOf(value) == -1;});
     var resultsPages = wordInitial.concat(wordContains);
     var listResults = document.getElementById("searchResults");
     if(resultsPages.length == 0)
