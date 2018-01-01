@@ -35,6 +35,7 @@ function initSearchField()
     //select the words to show
     $.ui.autocomplete.filter = function (array, term) 
     {
+        var term = term.trim();
         var wordInitial = array.filter(function(value) {return value.toLowerCase() == term.toLowerCase();});        
         wordInitial = wordInitial.concat(array.filter(function(value) {return wordInitial.indexOf(value) == -1 && new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(term)),"i").test(encodeURIComponent(value));}));
         var wordContains = array.filter(function(value) {return value.toLowerCase().indexOf(term.toLowerCase()) != -1 && wordInitial.indexOf(value) == -1;});
@@ -51,7 +52,7 @@ function initSearchField()
     //highlight the selected words
     $.ui.autocomplete.prototype._renderItem = function (ul, item) 
     {        
-        var t = String(encodeURIComponent(item.value)).replace(new RegExp(encodeURIComponent(this.term), "gi"),"<strong style='color:#788CFF'>$&</strong>");
+        var t = String(encodeURIComponent(item.value)).replace(new RegExp(encodeURIComponent(this.term.trim()), "gi"),"<strong style='color:#788CFF'>$&</strong>");
         return $("<li></li>")
                 .data("item.autocomplete", item)
                 .append("<div>" + decodeURIComponent(t) + "</div>")
@@ -65,7 +66,7 @@ function eventPressEnter(e, bool)
 {
     if (e.keyCode == 13 || bool == true) 
     {
-        var searchVal = document.getElementById("search").value;
+        var searchVal = document.getElementById("search").value.trim();
         var array = JSON.parse(localStorage.pages);
         var wordInitial =  array.filter(function(value) {return value.id.toLowerCase() == searchVal.toLowerCase();});     
         wordInitial = wordInitial.concat(array.filter(function(value) {return wordInitial.indexOf(value) == -1 && new RegExp("^"+$.ui.autocomplete.escapeRegex(encodeURIComponent(searchVal)),"i").test(encodeURIComponent(value.id));}));
@@ -91,7 +92,7 @@ function initSearchResults()
         window.open("../html/index.html","_self");                    
         return;
     }
-    var searchName = queryString.replace(new RegExp("[\"\'?]","g"),"").split("=")[1].toLowerCase();
+    var searchName = queryString.replace(new RegExp("[\"\'?]","g"),"").split("=")[1].toLowerCase().trim();
     document.getElementById("searchTitle").innerHTML +="\""+searchName+"\"";
 
     //obtain results
