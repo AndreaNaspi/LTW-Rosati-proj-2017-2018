@@ -21,16 +21,17 @@ Questa prima funzione inizializza il campo per la ricerca in modo da far funzion
 function initSearchField()
 {
     var pages = JSON.parse(localStorage.pages);
-    var language = pages.map(function(value){return value.id;});
+    var language = pages.map(function (value){return value.id;});
     //init autocomplete
-    $("#search").autocomplete({
+    $("#search").autocomplete(
+    {
         source: language,
-        focus: function (event, ui) { event.preventDefault();},
+        focus: function (event, ui) { event.preventDefault(); },
         select: function (event, ui) { eventPressEnter(event,true); }
     });
 
     //do search on enter click
-    $("#search").keydown(function(event) {eventPressEnter(event, false);});
+    $("#search").keydown(function (event) { eventPressEnter(event, false);});
 
     //select the words to show
     $.ui.autocomplete.filter = function (array, term) 
@@ -47,7 +48,7 @@ function initSearchField()
     {
         var ul = this.menu.element;
         ul.outerWidth(this.element.outerWidth());
-    }
+    };
 
     //highlight the selected words
     $.ui.autocomplete.prototype._renderItem = function (ul, item) 
@@ -93,7 +94,7 @@ function initSearchResults()
         return;
     }
     var searchName = queryString.replace(new RegExp("[\"\'?]","g"),"").split("=")[1].toLowerCase().trim();
-    document.getElementById("searchTitle").innerHTML +="\""+searchName+"\"";
+    document.getElementById("searchTitle").innerHTML += "\""+searchName+"\"";
 
     //obtain results
     var wordInitial =  pages.filter(function(value) {return value.id.toLowerCase() == searchName.toLowerCase();});         
